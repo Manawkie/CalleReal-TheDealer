@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dj43eirelpb0x"]
+
+[ext_resource type="Script" path="res://components/spawners/script/event_spawner.gd" id="1_rebgp"]
+[ext_resource type="PackedScene" uid="uid://cm8giiub21n8q" path="res://assets/spawns/exclamation.blend" id="1_xfkyw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ixubw"]
+
+[node name="EventSpawner" type="Node3D"]
+script = ExtResource("1_rebgp")
+
+[node name="exclamation" parent="." instance=ExtResource("1_xfkyw")]
+transform = Transform3D(0.674302, -0.738455, 0, 0.738455, 0.674302, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="exclamation"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="exclamation/Area3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.5, 2, 0.5)
+shape = SubResource("CapsuleShape3D_ixubw")
+
+[connection signal="input_event" from="exclamation/Area3D" to="." method="_on_area_3d_input_event"]

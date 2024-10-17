@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw0vbop7wsi"]
+
+[ext_resource type="Theme" uid="uid://b3ig4aw5ld7oi" path="res://components/buttons/dialogue_theme.tres" id="1_1gjkp"]
+[ext_resource type="Script" path="res://components/scripts/dialogue_handler.gd" id="1_lhpej"]
+[ext_resource type="Script" path="res://components/scripts/DialogueBox.gd" id="2_cvnk7"]
+[ext_resource type="JSON" path="res://dialogues/1stdialogue.json" id="2_wrw7q"]
+[ext_resource type="Theme" uid="uid://cu7bkvsimn3a" path="res://components/buttons/button_theme.tres" id="3_p6y3s"]
+[ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="4_j8pvr"]
+
+[node name="Dialogue_handler" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhpej")
+dialogue_json = ExtResource("2_wrw7q")
+list_of_dialogue = Array[JSON]([null, null, null, null, null, null, null, null, null, null])
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialogue1" type="Button" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 1101.0
+offset_top = 698.0
+offset_right = 1745.0
+offset_bottom = 801.0
+theme = ExtResource("1_1gjkp")
+
+[node name="Dialogue2" type="Button" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 1102.0
+offset_top = 818.0
+offset_right = 1746.0
+offset_bottom = 923.0
+theme = ExtResource("1_1gjkp")
+
+[node name="Dialogue3" type="Button" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 1100.0
+offset_top = 577.0
+offset_right = 1744.0
+offset_bottom = 683.0
+theme = ExtResource("1_1gjkp")
+
+[node name="DialogueBox" type="Node2D" parent="."]
+script = ExtResource("2_cvnk7")
+
+[node name="DialogueBoxContainer" type="VBoxContainer" parent="DialogueBox"]
+offset_left = 1100.0
+offset_top = 577.0
+offset_right = 1140.0
+offset_bottom = 617.0
+
+[node name="QuestionContainer" type="Label" parent="DialogueBox"]
+offset_left = 777.0
+offset_top = 444.0
+offset_right = 800.0
+offset_bottom = 467.0
+theme = ExtResource("3_p6y3s")
+
+[node name="EzDialogue" type="Node" parent="."]
+script = ExtResource("4_j8pvr")
+
+[connection signal="custom_signal_received" from="EzDialogue" to="." method="_on_ez_dialogue_custom_signal_received"]
+[connection signal="dialogue_generated" from="EzDialogue" to="." method="_on_ez_dialogue_dialogue_generated"]

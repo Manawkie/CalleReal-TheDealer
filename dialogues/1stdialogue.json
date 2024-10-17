@@ -1,0 +1,42 @@
+[
+	{
+		"commands_raw": "ano pangalan ko\n\n?> kimly -> choicenum1\n?> michael -> choicenum2\n?> joshua -> choicenum3",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			240,
+			120
+		]
+	},
+	{
+		"commands_raw": "mali",
+		"gnode_name": "choicenum1",
+		"id": 1,
+		"name": "choicenum1",
+		"position": [
+			420,
+			20
+		]
+	},
+	{
+		"commands_raw": "mali",
+		"gnode_name": "choicenum2",
+		"id": 2,
+		"name": "choicenum2",
+		"position": [
+			420,
+			100
+		]
+	},
+	{
+		"commands_raw": "tama",
+		"gnode_name": "choicenum3",
+		"id": 3,
+		"name": "choicenum3",
+		"position": [
+			420,
+			180
+		]
+	}
+]

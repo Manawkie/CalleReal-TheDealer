@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b3ig4aw5ld7oi"]
+
+[ext_resource type="StyleBox" uid="uid://du73psla6eqaq" path="res://components/buttons/dialogue_button.tres" id="1_bxkgw"]
+[ext_resource type="FontFile" uid="uid://bt1m3x0fdgg0c" path="res://assets/MEGRATH.otf" id="1_wuv42"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rlm1k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jhmjl"]
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_wuv42")
+Button/styles/disabled = SubResource("StyleBoxEmpty_rlm1k")
+Button/styles/focus = SubResource("StyleBoxEmpty_jhmjl")
+Button/styles/hover = ExtResource("1_bxkgw")
+Button/styles/normal = ExtResource("1_bxkgw")
+Button/styles/pressed = ExtResource("1_bxkgw")

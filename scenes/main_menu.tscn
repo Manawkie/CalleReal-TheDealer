@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://y0u2obe7x072"]
+
+[ext_resource type="Theme" uid="uid://cu7bkvsimn3a" path="res://components/buttons/button_theme.tres" id="1_lwjyt"]
+[ext_resource type="Script" path="res://scenes/scripts/main_menu.gd" id="1_ropon"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_ropon")
+
+[node name="play" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 103.0
+offset_top = 540.0
+offset_right = 548.0
+offset_bottom = 651.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lwjyt")
+text = "Play"
+
+[node name="load" type="Button" parent="."]
+offset_left = 103.0
+offset_top = 679.0
+offset_right = 406.0
+offset_bottom = 744.0
+theme = ExtResource("1_lwjyt")
+text = "Load
+"
+
+[node name="settings" type="Button" parent="."]
+offset_left = 103.0
+offset_top = 770.0
+offset_right = 406.0
+offset_bottom = 833.0
+theme = ExtResource("1_lwjyt")
+text = "Settings"
+
+[node name="exit" type="Button" parent="."]
+offset_left = 103.0
+offset_top = 860.0
+offset_right = 406.0
+offset_bottom = 926.0
+theme = ExtResource("1_lwjyt")
+text = "Exit
+"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
