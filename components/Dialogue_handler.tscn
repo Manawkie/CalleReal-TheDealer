@@ -32,8 +32,8 @@ offset_bottom = 1084.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(844, 605)
-scale = Vector2(1.6375, 1.6375)
+position = Vector2(888, 649)
+scale = Vector2(1.97708, 1.97708)
 texture = ExtResource("6_05iyd")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
@@ -73,10 +73,10 @@ theme = ExtResource("1_1gjkp")
 script = ExtResource("2_cvnk7")
 
 [node name="DialogueBoxContainer" type="VBoxContainer" parent="DialogueBox"]
-offset_left = 1250.0
-offset_top = 444.0
-offset_right = 1758.0
-offset_bottom = 806.0
+offset_left = 1266.0
+offset_top = 276.0
+offset_right = 1816.0
+offset_bottom = 638.0
 alignment = 1
 
 [node name="QuestionContainer" type="Label" parent="DialogueBox"]

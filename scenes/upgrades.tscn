@@ -1,15 +1,21 @@
-[gd_scene load_steps=13 format=3 uid="uid://cmfgbnbxyv478"]
+[gd_scene load_steps=19 format=3 uid="uid://cmfgbnbxyv478"]
 
+[ext_resource type="Script" path="res://scenes/scripts/upgrades.gd" id="1_3mn71"]
 [ext_resource type="Texture2D" uid="uid://dbhiv228wt8lb" path="res://assets/gui_asset/sad.png" id="1_35imp"]
 [ext_resource type="Texture2D" uid="uid://bgqvdxmo6ykv1" path="res://assets/gui_asset/b_5.png" id="2_vinwp"]
 [ext_resource type="FontFile" uid="uid://bt1m3x0fdgg0c" path="res://assets/MEGRATH.otf" id="2_yckvb"]
 [ext_resource type="Texture2D" uid="uid://capn2xggwrjlo" path="res://assets/gui_asset/b_4.png" id="3_u85xy"]
+[ext_resource type="Texture2D" uid="uid://dushpa84i0243" path="res://assets/gui_asset/field.png" id="3_wpfuu"]
 [ext_resource type="Texture2D" uid="uid://xgo54321ga2g" path="res://assets/gui_asset/b_3.png" id="4_v6pg6"]
-[ext_resource type="Theme" uid="uid://b3ig4aw5ld7oi" path="res://components/buttons/dialogue_theme.tres" id="6_pjm2l"]
+[ext_resource type="FontFile" uid="uid://batjodd5b3262" path="res://assets/GROBOLD.ttf" id="7_fg5s0"]
+[ext_resource type="Texture2D" uid="uid://dhpa2sylkahod" path="res://assets/gui_asset/f.png" id="8_ljkug"]
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xqtp7"]
-dof_blur_far_enabled = true
-dof_blur_amount = 0.69
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vegyg"]
+texture = ExtResource("3_wpfuu")
+
+[sub_resource type="Theme" id="Theme_adfy7"]
+Label/fonts/font = ExtResource("2_yckvb")
+Label/styles/normal = SubResource("StyleBoxTexture_vegyg")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvsod"]
 texture = ExtResource("3_u85xy")
@@ -24,24 +30,34 @@ texture = ExtResource("3_u85xy")
 texture = ExtResource("4_v6pg6")
 
 [sub_resource type="Theme" id="Theme_i0xnw"]
-Button/colors/font_color = Color(0.262428, 0.000206577, 0.813274, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 4
 Button/fonts/font = ExtResource("2_yckvb")
 Button/styles/focus = SubResource("StyleBoxTexture_uvsod")
 Button/styles/hover = SubResource("StyleBoxTexture_2k5ew")
 Button/styles/normal = SubResource("StyleBoxTexture_3xh27")
 Button/styles/pressed = SubResource("StyleBoxTexture_bk5j8")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_coiis"]
+texture = ExtResource("8_ljkug")
+
+[sub_resource type="Theme" id="Theme_dkk2t"]
+Label/constants/outline_size = 3
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("7_fg5s0")
+Label/styles/normal = SubResource("StyleBoxTexture_coiis")
+
 [node name="Upgrades" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-camera_attributes = SubResource("CameraAttributesPractical_xqtp7")
+script = ExtResource("1_3mn71")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture_filter = 1
-position = Vector2(947, 502)
-scale = Vector2(1.868, 1.868)
+position = Vector2(1338, 534)
+scale = Vector2(2.704, 1.868)
 texture = ExtResource("1_35imp")
 
 [node name="buttons" type="Control" parent="."]
@@ -52,56 +68,138 @@ offset_top = 6.10352e-05
 offset_right = 40.0001
 offset_bottom = 40.0001
 
-[node name="cd_upgrade_idle" type="Button" parent="buttons"]
+[node name="Panel" type="Panel" parent="buttons"]
 layout_mode = 0
-offset_left = 1015.0
-offset_top = 285.0
-offset_right = 1121.0
-offset_bottom = 341.0
+offset_left = 694.0
+offset_top = 197.0
+offset_right = 1456.0
+offset_bottom = 800.0
+
+[node name="Label" type="Label" parent="buttons/Panel"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 84.0
+offset_right = 546.0
+offset_bottom = 147.0
+theme = SubResource("Theme_adfy7")
+text = "Increase coin generated"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="buttons/Panel"]
+offset_left = 179.0
+offset_top = 214.0
+offset_right = 548.0
+offset_bottom = 277.0
+theme = SubResource("Theme_adfy7")
+text = "Decrease time wait for events"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="buttons/Panel"]
+offset_left = 178.0
+offset_top = 342.0
+offset_right = 547.0
+offset_bottom = 405.0
+theme = SubResource("Theme_adfy7")
+text = "Decrease time coin generation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="buttons/Panel"]
+offset_left = 176.0
+offset_top = 462.0
+offset_right = 545.0
+offset_bottom = 525.0
+theme = SubResource("Theme_adfy7")
+text = "Increase amount of money get from succesful deal"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="but1" type="Button" parent="buttons/Panel"]
+offset_left = 589.0
+offset_top = 87.0
+offset_right = 716.0
+offset_bottom = 145.0
+tooltip_text = "100"
 theme = SubResource("Theme_i0xnw")
 text = "UPGRADE"
 
-[node name="cd_upgrade_idle2" type="Button" parent="buttons"]
-offset_left = 1012.0
-offset_top = 653.0
-offset_right = 1118.0
-offset_bottom = 709.0
+[node name="but2" type="Button" parent="buttons/Panel"]
+offset_left = 591.0
+offset_top = 217.0
+offset_right = 718.0
+offset_bottom = 275.0
+tooltip_text = "100"
 theme = SubResource("Theme_i0xnw")
 text = "UPGRADE"
 
-[node name="cd_upgrade_idle3" type="Button" parent="buttons"]
-offset_left = 1014.0
-offset_top = 532.0
-offset_right = 1120.0
-offset_bottom = 588.0
+[node name="but3" type="Button" parent="buttons/Panel"]
+offset_left = 590.0
+offset_top = 345.0
+offset_right = 717.0
+offset_bottom = 403.0
+tooltip_text = "50"
 theme = SubResource("Theme_i0xnw")
 text = "UPGRADE"
 
-[node name="cd_upgrade_idle4" type="Button" parent="buttons"]
-offset_left = 1015.0
-offset_top = 405.0
-offset_right = 1121.0
-offset_bottom = 461.0
+[node name="but4" type="Button" parent="buttons/Panel"]
+offset_left = 588.0
+offset_top = 465.0
+offset_right = 715.0
+offset_bottom = 523.0
+tooltip_text = "500"
 theme = SubResource("Theme_i0xnw")
 text = "UPGRADE"
+
+[node name="level1" type="Label" parent="buttons/Panel"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 78.0
+offset_right = 139.0
+offset_bottom = 156.0
+theme = SubResource("Theme_dkk2t")
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level2" type="Label" parent="buttons/Panel"]
+offset_left = 31.0
+offset_top = 204.0
+offset_right = 140.0
+offset_bottom = 282.0
+theme = SubResource("Theme_dkk2t")
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level3" type="Label" parent="buttons/Panel"]
+offset_left = 32.0
+offset_top = 335.0
+offset_right = 141.0
+offset_bottom = 413.0
+theme = SubResource("Theme_dkk2t")
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level4" type="Label" parent="buttons/Panel"]
+offset_left = 34.0
+offset_top = 451.0
+offset_right = 143.0
+offset_bottom = 529.0
+theme = SubResource("Theme_dkk2t")
+text = "LVL 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="labels" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="labels"]
-layout_mode = 0
-offset_left = 679.0
-offset_top = 295.0
-offset_right = 983.0
-offset_bottom = 358.0
-theme = ExtResource("6_pjm2l")
-text = "asdasdasdas"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 1922.0
-offset_bottom = 1081.0
+[connection signal="pressed" from="buttons/Panel/but1" to="." method="_on_but_1_pressed"]
+[connection signal="pressed" from="buttons/Panel/but2" to="." method="_on_but_2_pressed"]
+[connection signal="pressed" from="buttons/Panel/but3" to="." method="_on_but_3_pressed"]
+[connection signal="pressed" from="buttons/Panel/but4" to="." method="_on_but_4_pressed"]

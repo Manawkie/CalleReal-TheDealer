@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://bjq1xuooywtq"]
+[gd_scene load_steps=16 format=3 uid="uid://bjq1xuooywtq"]
 
 [ext_resource type="Script" path="res://scenes/scripts/cambase.gd" id="1_b6n1y"]
 [ext_resource type="Script" path="res://scenes/scripts/world.gd" id="1_nha10"]
 [ext_resource type="Shader" path="res://scenes/world.gdshader" id="1_u4ahh"]
 [ext_resource type="MeshLibrary" uid="uid://d3gu1liwvl5pa" path="res://assets/tiles.tres" id="2_55ebp"]
+[ext_resource type="PackedScene" uid="uid://cmfgbnbxyv478" path="res://scenes/upgrades.tscn" id="2_bl0bm"]
 [ext_resource type="PackedScene" uid="uid://cfuhcr5yy0rab" path="res://scenes/main_ui.tscn" id="2_vmvnb"]
 [ext_resource type="PackedScene" uid="uid://dattmmpua3tgk" path="res://scenes/tutorial.tscn" id="5_3v7ke"]
 [ext_resource type="Script" path="res://assets/spawns/spawn_handler.gd" id="6_ltrxf"]
@@ -21,6 +22,10 @@ sky_material = SubResource("ProceduralSkyMaterial_fcx2o")
 [sub_resource type="Environment" id="Environment_5wj1s"]
 background_mode = 2
 sky = SubResource("Sky_87x4u")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_7rd7b"]
+dof_blur_far_enabled = true
+dof_blur_amount = 0.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g2rld"]
 render_priority = 0
@@ -44,6 +49,9 @@ subdivide_depth = 16
 [node name="World" type="Node3D"]
 script = ExtResource("1_nha10")
 
+[node name="Upgrades" parent="." instance=ExtResource("2_bl0bm")]
+visible = false
+
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("2_55ebp")
 cell_size = Vector3(4, 5.25, 4)
@@ -55,15 +63,14 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 12, 0)
 
 [node name="MainUi" parent="." instance=ExtResource("2_vmvnb")]
-offset_left = 1477.0
-offset_top = 900.0
-offset_right = 1502.0
-offset_bottom = 948.0
+offset_right = 11.0
+offset_bottom = 14.0
 
 [node name="environment" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="environment"]
 environment = SubResource("Environment_5wj1s")
+camera_attributes = SubResource("CameraAttributesPractical_7rd7b")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="environment"]
 transform = Transform3D(1, 0, 0, 0, 0.907777, 0.419452, 0, -0.419452, 0.907777, 0, -1.02499, 0)

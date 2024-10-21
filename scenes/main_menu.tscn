@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://y0u2obe7x072"]
+[gd_scene load_steps=4 format=3 uid="uid://y0u2obe7x072"]
 
 [ext_resource type="Theme" uid="uid://cu7bkvsimn3a" path="res://components/buttons/button_theme.tres" id="1_lwjyt"]
 [ext_resource type="Script" path="res://scenes/scripts/main_menu.gd" id="1_ropon"]
 
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_4l3w5"]
+dof_blur_far_enabled = true
+dof_blur_near_enabled = true
+dof_blur_amount = 0.4
+
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_ropon")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+camera_attributes = SubResource("CameraAttributesPractical_4l3w5")
 
 [node name="play" type="Button" parent="."]
 anchors_preset = 8

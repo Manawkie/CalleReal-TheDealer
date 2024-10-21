@@ -69,7 +69,6 @@ offset_bottom = 222.0
 theme = SubResource("Theme_rty0h")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
 
 [connection signal="changed" from="Pbar" to="." method="_on_pbar_changed"]
 [connection signal="button_down" from="Pbar/Button" to="." method="_on_button_button_down"]

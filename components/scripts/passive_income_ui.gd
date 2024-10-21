@@ -7,9 +7,10 @@ func _ready() -> void:
 	pass
 	
 func _process(delta: float) -> void:
+	$Timer.wait_time = Global.coin_gen_time
 	if $Pbar.value == 10:
 		$Pbar.value = 0
-		Global.current_money += 10
+		Global.current_money += Global.coin_gen
 	
 
 

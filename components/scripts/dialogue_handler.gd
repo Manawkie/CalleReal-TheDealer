@@ -22,13 +22,13 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if question.text == "end":
-		if Global.point >= 5:
-			Global.current_money += 100
+		if Global.point >= 7:
+			Global.current_money += Global.success_deal
 			Global.point = 0
 			
 		else:
-			if randi() % 10 >= 5:
-				Global.current_money -= 50
+			if Global.point < 7:
+				Global.current_money -= 150
 				Global.point = 0
 				
 		queue_free()
