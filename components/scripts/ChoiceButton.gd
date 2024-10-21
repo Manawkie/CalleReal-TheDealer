@@ -13,6 +13,5 @@ func _on_pressed():
 	choice_selected.emit(choice_index)
 
 
-func _ready() -> void:
-	pass
+
 	

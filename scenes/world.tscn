@@ -103,7 +103,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0)
 wait_time = 25.0
 
 [node name="Scenes" type="Node2D" parent="."]
-visible = false
 
 [node name="Tutorial" parent="Scenes" instance=ExtResource("5_3v7ke")]
 

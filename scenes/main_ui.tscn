@@ -1,9 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfuhcr5yy0rab"]
+[gd_scene load_steps=12 format=3 uid="uid://cfuhcr5yy0rab"]
 
 [ext_resource type="PackedScene" uid="uid://bmaoup47irkpx" path="res://components/ui/money_ui.tscn" id="1_8rjxt"]
 [ext_resource type="Script" path="res://scenes/scripts/main_ui.gd" id="1_x2amo"]
 [ext_resource type="PackedScene" uid="uid://byhlejls6jsxl" path="res://components/ui/passive_income_ui.tscn" id="2_ln8id"]
 [ext_resource type="Script" path="res://components/scripts/money_ui.gd" id="2_m73bl"]
+[ext_resource type="Texture2D" uid="uid://bqw22i5hcgtix" path="res://assets/gui_asset/11.png" id="5_d1yt7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fmo3f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ep1ot"]
+texture = ExtResource("5_d1yt7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1dtvl"]
+texture = ExtResource("5_d1yt7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lb6lf"]
+texture = ExtResource("5_d1yt7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hwojr"]
+texture = ExtResource("5_d1yt7")
+
+[sub_resource type="Theme" id="Theme_jf4oc"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_fmo3f")
+Button/styles/focus = SubResource("StyleBoxTexture_ep1ot")
+Button/styles/hover = SubResource("StyleBoxTexture_1dtvl")
+Button/styles/normal = SubResource("StyleBoxTexture_lb6lf")
+Button/styles/pressed = SubResource("StyleBoxTexture_hwojr")
 
 [node name="MainUi" type="Control"]
 layout_mode = 3
@@ -27,10 +49,11 @@ offset_bottom = 692.0
 
 [node name="upgrade" type="Button" parent="."]
 layout_mode = 0
-offset_left = 1678.0
-offset_top = 230.0
-offset_right = 1882.0
-offset_bottom = 324.0
+offset_left = 1729.0
+offset_top = 200.0
+offset_right = 1864.0
+offset_bottom = 333.0
+theme = SubResource("Theme_jf4oc")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
