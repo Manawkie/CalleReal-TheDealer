@@ -1,27 +1,39 @@
 extends Control
 
-@export var dialogue_json : JSON
 @export var list_of_dialogue: Array[JSON]
 @onready var state = {
 	"player_name": player_name
 }
 @onready var dia_box_handler = $DialogueBox
+@onready var dia_handler = $"."
+@onready var question = $DialogueBox/QuestionContainer
 @onready var character_load = preload("res://scenes/character_selection.tscn")
-var player_name : String = ""
+var player_name : String = Global.player_name
+var point: int = 0
+
 
 
 
 
 func _ready() -> void:
-	pass
+	($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[randi() % list_of_dialogue.size()], state)
 	
 
 
 func _process(delta: float) -> void:
-	#if character_load.is_name_available == true:
-		#character_name = character_load.character_name
-		#character_load.is_name_available = false
-		pass
+	if question.text == "end":
+		if Global.point >= 5:
+			Global.current_money += 100
+			Global.point = 0
+			
+		else:
+			if randi() % 10 >= 5:
+				Global.current_money -= 50
+				Global.point = 0
+				
+		queue_free()
+		
+	
 
 
 func _on_ez_dialogue_dialogue_generated(response: DialogueResponse) -> void:
@@ -36,9 +48,5 @@ func _on_ez_dialogue_dialogue_generated(response: DialogueResponse) -> void:
 
 
 func _on_ez_dialogue_custom_signal_received(value: Variant) -> void:
-	if value == "done":
-		pass
-	pass # Replace with function body.
+	print(value)
 	
-func start_dialogue(dialogue):
-	($EzDialogue as EzDialogue).start_dialogue(dialogue_json, state)

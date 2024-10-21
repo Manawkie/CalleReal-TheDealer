@@ -1,42 +1,42 @@
 [
 	{
-		"commands_raw": "ano pangalan ko\n\n?> kimly -> choicenum1\n?> michael -> choicenum2\n?> joshua -> choicenum3",
+		"commands_raw": "I’ve heard your pitch ${player_name}\nbut I’m not convinced there’s a big enough demand for your product right now. Why do you think this is the right time to enter the market?\n\n?> I completely understand your hesitation, but our research shows that market demand is growing rapidly. Our competitors are still relying on outdated solutions, which gives us a window to capture untapped customers and set the trend. -> dia1\n?> That’s a great question. While the demand may not seem overwhelming right now, we’re actually focusing on niche markets that have high growth potential. Early adopters will drive momentum, and we can expand from there -> dia1\n?> I see your point, but trends can change quickly. I believe that by entering the market now, we can position ourselves as leaders when the demand picks up, rather than playing catch-up -> dia1",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "start",
 		"position": [
 			240,
-			120
-		]
-	},
-	{
-		"commands_raw": "mali",
-		"gnode_name": "choicenum1",
-		"id": 1,
-		"name": "choicenum1",
-		"position": [
-			420,
-			20
-		]
-	},
-	{
-		"commands_raw": "mali",
-		"gnode_name": "choicenum2",
-		"id": 2,
-		"name": "choicenum2",
-		"position": [
-			420,
 			100
 		]
 	},
 	{
-		"commands_raw": "tama",
-		"gnode_name": "choicenum3",
-		"id": 3,
-		"name": "choicenum3",
+		"commands_raw": "That’s an interesting perspective. But my main concern is your scalability. How do you plan to grow without burning through a lot of capital?\n\n?> Great question, and we’ve already thought that through. Our business model is designed for lean growth, focusing on organic customer acquisition through word-of-mouth and referral programs rather than expensive marketing campaigns -> dia2\n\n?> We’ve structured our operations to scale efficiently. Our core technology is built to handle significant growth with minimal additional cost, and we’re focusing on securing strategic partnerships to fuel that expansion without straining our budget. -> dia2\n\n?> I understand your concern, and scaling does require careful planning. We plan to take it step by step, reinvesting profits rather than relying solely on external funding for expansion -> dia2",
+		"gnode_name": "dia1",
+		"id": 4,
+		"name": "dia1",
 		"position": [
-			420,
-			180
+			360,
+			100
+		]
+	},
+	{
+		"commands_raw": "That’s good to hear. However, I still need to know how you’re going to handle competition. There are bigger players in this space with more resources. What makes you think you can win against them?\n\n?> That’s a fair point. What makes us stand out is our agility. Larger companies are slower to innovate and adapt. We can respond to market changes faster and introduce features that our competitors can’t deploy as quickly. -> dia3\n\n?> We have a clear advantage in terms of customer focus. Our direct interaction with early adopters allows us to refine our product based on real-time feedback, something bigger companies struggle to do at scale -> dia3\n\n?> We may be smaller, but that’s where our strength lies. We don’t need to be the biggest player to be successful; we just need to carve out a loyal, niche customer base that values our unique offering -> dia3",
+		"gnode_name": "dia2",
+		"id": 5,
+		"name": "dia2",
+		"position": [
+			540,
+			100
+		]
+	},
+	{
+		"commands_raw": "end",
+		"gnode_name": "dia3",
+		"id": 6,
+		"name": "dia3",
+		"position": [
+			700,
+			100
 		]
 	}
 ]

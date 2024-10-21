@@ -5,8 +5,9 @@ extends Node2D
 @onready var dialogue_box = $dialogue_box
 @onready var dialogues = preload("res://components/Dialogue_handler.tscn")
 @onready var dia_handler = $DiaHandler/Dia1
+
 var counter = 0
-var player_name: String = "Michael"
+var player_name: String = Global.player_name
 var list_of_dialogue = ["Hello! Welcome " + player_name +" we have been waiting for your arrival",
 "We badly needed someone like you to dominate the world of businesses",
 "Wishing you luck",
@@ -36,7 +37,7 @@ func next_dialogue():
 		counter += 1
 		
 	if counter == 4:
-		get_tree().queue_delete(self)
+		queue_free()
 	
 	
 	

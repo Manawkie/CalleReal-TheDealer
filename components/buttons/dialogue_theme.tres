@@ -8,10 +8,13 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jhmjl"]
 
 [resource]
-Button/font_sizes/font_size = 32
+Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_wuv42")
 Button/styles/disabled = SubResource("StyleBoxEmpty_rlm1k")
 Button/styles/focus = SubResource("StyleBoxEmpty_jhmjl")
 Button/styles/hover = ExtResource("1_bxkgw")
 Button/styles/normal = ExtResource("1_bxkgw")
 Button/styles/pressed = ExtResource("1_bxkgw")
+Label/colors/font_color = Color(0, 0, 0, 0.756863)
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_wuv42")

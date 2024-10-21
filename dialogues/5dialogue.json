@@ -1,0 +1,42 @@
+[
+	{
+		"commands_raw": "Thanks for presenting your pitch. I’m interested, but I’m not sure how defensible your technology is. What stops competitors from copying your idea and beating you to market?\n\n\n?> We’ve built a technological moat by incorporating proprietary algorithms that are difficult to replicate. Moreover, we’re focused on building strong brand loyalty, which will create an additional layer of defense against competitors -> dia1\n\n?> I understand the concern. While we don’t have patents yet, our first-mover advantage is key. We’re already establishing market presence, and by the time competitors catch up, we’ll have a strong foothold -> dia1\n\n?> Our technology is protected by several patents we’ve filed, giving us a strong intellectual property foundation. On top of that, we’re continually innovating, so even if competitors try to catch up, we’ll stay ahead by evolving faster than they can. -> dia1",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			-540,
+			-20
+		]
+	},
+	{
+		"commands_raw": "That’s good to know, but what about revenue streams? You mentioned different offerings, but how do you plan to diversify your income and not rely too heavily on just one product or service?\n\n?> We’re focused on expanding into adjacent markets. Once we establish a presence with our core product, we’ll launch other related services to capture a broader customer base and diversify revenue -> dia2\n\n?> We’re building a multi-tiered revenue model that includes both subscription-based services and one-time purchases. This diversity allows us to cater to different customer needs while ensuring a stable, recurring income stream alongside more immediate sales. -> dia2\n\n?> We’re planning to launch complementary products and services that align with our core offering. By cross-selling to existing customers, we can maximize lifetime value while maintaining a diversified revenue stream. -> dia2",
+		"gnode_name": "dia1",
+		"id": 1,
+		"name": "dia1",
+		"position": [
+			-360,
+			-20
+		]
+	},
+	{
+		"commands_raw": "I see, but there’s one more thing I need clarity on—your growth strategy. How do you plan to grow without sacrificing quality or customer satisfaction as demand increases?\n\n?> Our strategy focuses on sustainable growth. We’re planning to expand gradually, ensuring that every new customer gets the same quality of service as our early adopters. We’ve also prioritized key hires to maintain quality -> dia3\n\n?> We’re approaching growth step by step. As demand increases, we’ll expand our team and infrastructure at a measured pace to ensure that we don’t overwhelm our resources or compromise on quality -> dia3\n\n?> We’ve implemented scalable processes from the start. By leveraging automation and outsourcing non-core tasks, we can grow rapidly while maintaining a high level of service and product quality. Our team is fully equipped to manage this. -> dia3",
+		"gnode_name": "dia2",
+		"id": 2,
+		"name": "dia2",
+		"position": [
+			-180,
+			-20
+		]
+	},
+	{
+		"commands_raw": "end",
+		"gnode_name": "dia3",
+		"id": 3,
+		"name": "dia3",
+		"position": [
+			0,
+			-20
+		]
+	}
+]

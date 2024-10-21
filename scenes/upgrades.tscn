@@ -1,0 +1,107 @@
+[gd_scene load_steps=13 format=3 uid="uid://cmfgbnbxyv478"]
+
+[ext_resource type="Texture2D" uid="uid://dbhiv228wt8lb" path="res://assets/gui_asset/sad.png" id="1_35imp"]
+[ext_resource type="Texture2D" uid="uid://bgqvdxmo6ykv1" path="res://assets/gui_asset/b_5.png" id="2_vinwp"]
+[ext_resource type="FontFile" uid="uid://bt1m3x0fdgg0c" path="res://assets/MEGRATH.otf" id="2_yckvb"]
+[ext_resource type="Texture2D" uid="uid://capn2xggwrjlo" path="res://assets/gui_asset/b_4.png" id="3_u85xy"]
+[ext_resource type="Texture2D" uid="uid://xgo54321ga2g" path="res://assets/gui_asset/b_3.png" id="4_v6pg6"]
+[ext_resource type="Theme" uid="uid://b3ig4aw5ld7oi" path="res://components/buttons/dialogue_theme.tres" id="6_pjm2l"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_xqtp7"]
+dof_blur_far_enabled = true
+dof_blur_amount = 0.69
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvsod"]
+texture = ExtResource("3_u85xy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2k5ew"]
+texture = ExtResource("2_vinwp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3xh27"]
+texture = ExtResource("3_u85xy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bk5j8"]
+texture = ExtResource("4_v6pg6")
+
+[sub_resource type="Theme" id="Theme_i0xnw"]
+Button/colors/font_color = Color(0.262428, 0.000206577, 0.813274, 1)
+Button/fonts/font = ExtResource("2_yckvb")
+Button/styles/focus = SubResource("StyleBoxTexture_uvsod")
+Button/styles/hover = SubResource("StyleBoxTexture_2k5ew")
+Button/styles/normal = SubResource("StyleBoxTexture_3xh27")
+Button/styles/pressed = SubResource("StyleBoxTexture_bk5j8")
+
+[node name="Upgrades" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+camera_attributes = SubResource("CameraAttributesPractical_xqtp7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(947, 502)
+scale = Vector2(1.868, 1.868)
+texture = ExtResource("1_35imp")
+
+[node name="buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.10352e-05
+offset_top = 6.10352e-05
+offset_right = 40.0001
+offset_bottom = 40.0001
+
+[node name="cd_upgrade_idle" type="Button" parent="buttons"]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 285.0
+offset_right = 1121.0
+offset_bottom = 341.0
+theme = SubResource("Theme_i0xnw")
+text = "UPGRADE"
+
+[node name="cd_upgrade_idle2" type="Button" parent="buttons"]
+offset_left = 1012.0
+offset_top = 653.0
+offset_right = 1118.0
+offset_bottom = 709.0
+theme = SubResource("Theme_i0xnw")
+text = "UPGRADE"
+
+[node name="cd_upgrade_idle3" type="Button" parent="buttons"]
+offset_left = 1014.0
+offset_top = 532.0
+offset_right = 1120.0
+offset_bottom = 588.0
+theme = SubResource("Theme_i0xnw")
+text = "UPGRADE"
+
+[node name="cd_upgrade_idle4" type="Button" parent="buttons"]
+offset_left = 1015.0
+offset_top = 405.0
+offset_right = 1121.0
+offset_bottom = 461.0
+theme = SubResource("Theme_i0xnw")
+text = "UPGRADE"
+
+[node name="labels" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="labels"]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 295.0
+offset_right = 983.0
+offset_bottom = 358.0
+theme = ExtResource("6_pjm2l")
+text = "asdasdasdas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1081.0

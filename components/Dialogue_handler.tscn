@@ -1,11 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://cw0vbop7wsi"]
+[gd_scene load_steps=15 format=3 uid="uid://cw0vbop7wsi"]
 
 [ext_resource type="Theme" uid="uid://b3ig4aw5ld7oi" path="res://components/buttons/dialogue_theme.tres" id="1_1gjkp"]
 [ext_resource type="Script" path="res://components/scripts/dialogue_handler.gd" id="1_lhpej"]
 [ext_resource type="Script" path="res://components/scripts/DialogueBox.gd" id="2_cvnk7"]
 [ext_resource type="JSON" path="res://dialogues/1stdialogue.json" id="2_wrw7q"]
 [ext_resource type="Theme" uid="uid://cu7bkvsimn3a" path="res://components/buttons/button_theme.tres" id="3_p6y3s"]
+[ext_resource type="JSON" path="res://dialogues/2nddialogue.json" id="3_yp6fp"]
+[ext_resource type="JSON" path="res://dialogues/3dialogue.json" id="4_0jrrw"]
 [ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="4_j8pvr"]
+[ext_resource type="JSON" path="res://dialogues/4dialogue.json" id="5_q118n"]
+[ext_resource type="Texture2D" uid="uid://c8hwxs7px303j" path="res://assets/dialogue_box.png" id="6_05iyd"]
+[ext_resource type="JSON" path="res://dialogues/5dialogue.json" id="6_nl48v"]
+[ext_resource type="JSON" path="res://dialogues/6dialogue.json" id="7_jjf3g"]
+[ext_resource type="JSON" path="res://dialogues/7dialogue.json" id="8_e44w8"]
+[ext_resource type="JSON" path="res://dialogues/8dialogue.json" id="9_fow0n"]
 
 [node name="Dialogue_handler" type="Control"]
 layout_mode = 3
@@ -15,8 +23,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lhpej")
-dialogue_json = ExtResource("2_wrw7q")
-list_of_dialogue = Array[JSON]([null, null, null, null, null, null, null, null, null, null])
+list_of_dialogue = Array[JSON]([ExtResource("2_wrw7q"), ExtResource("2_wrw7q"), ExtResource("3_yp6fp"), ExtResource("4_0jrrw"), ExtResource("5_q118n"), ExtResource("6_nl48v"), ExtResource("7_jjf3g"), ExtResource("8_e44w8"), ExtResource("9_fow0n")])
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1926.0
+offset_bottom = 1084.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(844, 605)
+scale = Vector2(1.6375, 1.6375)
+texture = ExtResource("6_05iyd")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 visible = false
@@ -55,17 +73,20 @@ theme = ExtResource("1_1gjkp")
 script = ExtResource("2_cvnk7")
 
 [node name="DialogueBoxContainer" type="VBoxContainer" parent="DialogueBox"]
-offset_left = 1100.0
-offset_top = 577.0
-offset_right = 1140.0
-offset_bottom = 617.0
+offset_left = 1250.0
+offset_top = 444.0
+offset_right = 1758.0
+offset_bottom = 806.0
+alignment = 1
 
 [node name="QuestionContainer" type="Label" parent="DialogueBox"]
-offset_left = 777.0
-offset_top = 444.0
-offset_right = 800.0
-offset_bottom = 467.0
+offset_left = 630.0
+offset_top = 455.0
+offset_right = 1074.0
+offset_bottom = 675.0
 theme = ExtResource("3_p6y3s")
+autowrap_mode = 3
+justification_flags = 0
 
 [node name="EzDialogue" type="Node" parent="."]
 script = ExtResource("4_j8pvr")

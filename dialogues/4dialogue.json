@@ -1,0 +1,42 @@
+[
+	{
+		"commands_raw": "end",
+		"gnode_name": "dia3",
+		"id": 0,
+		"name": "dia3",
+		"position": [
+			180,
+			100
+		]
+	},
+	{
+		"commands_raw": "I’m intrigued by your idea, but I’m concerned about the risk involved. The market you’re targeting is competitive and volatile. How do you plan to mitigate those risks?\n\n?> That’s a valid concern. We’ve developed a multi-pronged risk management strategy that includes diversifying our offerings and entering stable sub-markets within our niche. This will help us stay agile and shield us from potential market fluctuations. -> dia1\n\n?> We acknowledge the market is competitive, but we’ve built strong relationships with key partners, giving us a competitive edge. Our product is also designed to adapt to changing trends, so we can pivot quickly if needed -> dia1\n\n?> I understand the market’s volatility, but we’re confident in our product’s value proposition. By focusing on a core, underserved segment, we can capture a loyal customer base even in uncertain conditions -> dia1",
+		"gnode_name": "start",
+		"id": 1,
+		"name": "start",
+		"position": [
+			-380,
+			100
+		]
+	},
+	{
+		"commands_raw": "That’s reassuring, but I’m still wondering about your customer acquisition strategy. How do you plan to reach and retain your target audience in such a crowded space?\n\n?> We’ve developed a robust customer acquisition plan centered on digital marketing and partnerships. We’re focusing on a data-driven approach to target specific customer segments and build a loyal community through personalized experiences. -> dia2\n\n?> Our strategy revolves around building strong customer relationships. We’re investing in both paid and organic marketing channels, and we plan to leverage influencers and social proof to create a sense of trust and reliability around our brand -> dia2\n\n?> Customer acquisition is key for us. We plan to focus on organic growth through word of mouth, relying on the strength of our product to speak for itself and generate buzz in the market -> dia2\n",
+		"gnode_name": "dia1",
+		"id": 2,
+		"name": "dia1",
+		"position": [
+			-200,
+			100
+		]
+	},
+	{
+		"commands_raw": "Okay, I like the focus on targeted growth. But what about your competition? There are some big players in this space. What’s your strategy to stay competitive and avoid getting overshadowed?\n\n?> We believe our competitive advantage lies in our speed and innovation. Larger players tend to be slower to adapt, whereas we can quickly roll out new features and respond to customer feedback, keeping us ahead of the curve. -> dia3\n\n?> Our unique value proposition is our flexibility. While bigger companies focus on mass appeal, we’re offering highly personalized solutions that cater to specific needs within our market, allowing us to differentiate ourselves and build strong brand loyalty -> dia3\n\n?> We’re not trying to outcompete the giants head-on. Instead, we’re focusing on a smaller, niche segment where we can dominate and grow before expanding further into broader markets -> dia3",
+		"gnode_name": "dia2",
+		"id": 3,
+		"name": "dia2",
+		"position": [
+			-20,
+			100
+		]
+	}
+]

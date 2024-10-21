@@ -1,9 +1,77 @@
-[gd_scene format=3 uid="uid://byhlejls6jsxl"]
+[gd_scene load_steps=14 format=3 uid="uid://byhlejls6jsxl"]
+
+[ext_resource type="Script" path="res://components/scripts/passive_income_ui.gd" id="1_0wg1l"]
+[ext_resource type="Texture2D" uid="uid://b6sjapdqf0qsm" path="res://assets/gui_asset/32x32 circle bar over.png" id="1_xvpi7"]
+[ext_resource type="Texture2D" uid="uid://dhnu04mnv164d" path="res://assets/gui_asset/32x32 circle bar progress blue.png" id="2_8ebmb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sg7x7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yqd7u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c30o2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k6lio"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3j8t1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vdt7t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0dc6s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dgv5d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u8cfm"]
+
+[sub_resource type="Theme" id="Theme_rty0h"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_sg7x7")
+Button/styles/focus = SubResource("StyleBoxEmpty_yqd7u")
+Button/styles/hover = SubResource("StyleBoxEmpty_c30o2")
+Button/styles/hover_mirrored = SubResource("StyleBoxEmpty_k6lio")
+Button/styles/hover_pressed = SubResource("StyleBoxEmpty_3j8t1")
+Button/styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vdt7t")
+Button/styles/normal = SubResource("StyleBoxEmpty_0dc6s")
+Button/styles/normal_mirrored = SubResource("StyleBoxEmpty_dgv5d")
+Button/styles/pressed = SubResource("StyleBoxEmpty_u8cfm")
 
 [node name="PassiveIncomeUi" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = -29.0
+offset_right = 17.0
+offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0wg1l")
+
+[node name="Pbar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+texture_repeat = 3
+layout_mode = 0
+offset_left = -15.0
+offset_top = 32.0
+offset_right = 206.0
+offset_bottom = 253.0
+max_value = 10.0
+rounded = true
+fill_mode = 4
+nine_patch_stretch = true
+texture_under = ExtResource("1_xvpi7")
+texture_progress = ExtResource("2_8ebmb")
+
+[node name="Button" type="Button" parent="Pbar"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 221.0
+offset_bottom = 222.0
+theme = SubResource("Theme_rty0h")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="changed" from="Pbar" to="." method="_on_pbar_changed"]
+[connection signal="button_down" from="Pbar/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Pbar/Button" to="." method="_on_button_button_up"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

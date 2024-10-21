@@ -6,5 +6,5 @@ var character_name: String = ""
 
 
 func _on_next_pressed():
-	character_name = input_field.text
+	Global.player_name = input_field.text
 	get_tree().change_scene_to_file("res://scenes/world.tscn")

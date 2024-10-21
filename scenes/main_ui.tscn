@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfuhcr5yy0rab"]
+
+[ext_resource type="PackedScene" uid="uid://bmaoup47irkpx" path="res://components/ui/money_ui.tscn" id="1_8rjxt"]
+[ext_resource type="PackedScene" uid="uid://byhlejls6jsxl" path="res://components/ui/passive_income_ui.tscn" id="2_ln8id"]
+[ext_resource type="Script" path="res://components/scripts/money_ui.gd" id="2_m73bl"]
+
+[node name="MainUi" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="MoneyUi" parent="." instance=ExtResource("1_8rjxt")]
+layout_mode = 1
+offset_left = 112.0
+offset_top = -775.0
+offset_right = 112.0
+offset_bottom = -775.0
+script = ExtResource("2_m73bl")
+
+[node name="PassiveIncomeUi" parent="." instance=ExtResource("2_ln8id")]
+layout_mode = 1
+offset_left = -94.0
+offset_top = -142.0
+offset_right = -94.0
+offset_bottom = -142.0

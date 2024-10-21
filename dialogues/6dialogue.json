@@ -1,0 +1,42 @@
+[
+	{
+		"commands_raw": "I like the product, but I’m concerned about the market entry barriers. What’s stopping a larger, more established company from simply copying your idea and pushing you out?\n\n?> We’ve built strong strategic partnerships that provide us with unique advantages in terms of supply chain and distribution, giving us a foothold that competitors would find difficult to replicate. In addition, we have filed patents to protect our core technology. -> dia1\n\n?> Our first-mover advantage is key here. We’re already capturing market share and building brand loyalty, and by the time larger companies might try to replicate what we’re doing, we’ll have established ourselves as the leader in this niche -> dia1\n\n?> We’re working fast to establish a presence in the market. While larger companies could pose a threat, we believe our focus on customer experience and agility gives us an edge that will make it hard for them to compete head-to-head -> dia1\n\n",
+		"gnode_name": "start",
+		"id": 0,
+		"name": "start",
+		"position": [
+			-620,
+			20
+		]
+	},
+	{
+		"commands_raw": "That’s helpful, but I’m curious about your long-term vision. Where do you see the company going in the next five years, and how will you maintain growth beyond the initial product? \n\n?> We see ourselves as a leader in this niche, expanding not only in product offerings but also through strategic partnerships and acquisitions. We’re focused on being a dominant player within this space before moving into adjacent markets -> dia2\n\n?> In five years, we plan to expand our product line and move into international markets. Our strategy includes leveraging our current platform to introduce complementary products, creating a full ecosystem that locks in customer loyalty and drives long-term growth. -> dia2\n\n?> Our growth strategy involves scaling operations and optimizing our current offerings to generate maximum returns. Once we’ve solidified our market position, we’ll explore additional products that fit within our brand -> dia2",
+		"gnode_name": "dia1",
+		"id": 1,
+		"name": "dia1",
+		"position": [
+			-460,
+			20
+		]
+	},
+	{
+		"commands_raw": "I like the ambition, but let’s talk about profitability. How soon do you expect to break even, and how will you ensure profitability without sacrificing growth?\n\n?> We’re expecting to break even within 18 months, thanks to our lean operating model and aggressive focus on high-margin products. Our scalable processes mean we can grow without a significant increase in costs, which will help drive early profitability. -> dia3\n\n?> We anticipate reaching profitability within two years. Our plan is to reinvest early profits into further growth while keeping operating expenses under control. We’re focused on maintaining a balance between growth and profitability -> dia3\n\n? Our goal is to break even within the next 24 months. We’re focusing on keeping costs low by negotiating better terms with suppliers and using our early revenue to fund growth initiatives that will ensure long-term profitability -> dia3",
+		"gnode_name": "dia2",
+		"id": 2,
+		"name": "dia2",
+		"position": [
+			-300,
+			20
+		]
+	},
+	{
+		"commands_raw": "end",
+		"gnode_name": "dia3",
+		"id": 3,
+		"name": "dia3",
+		"position": [
+			-140,
+			20
+		]
+	}
+]
