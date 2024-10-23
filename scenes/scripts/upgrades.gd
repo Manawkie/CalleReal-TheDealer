@@ -40,7 +40,7 @@ func _on_but_3_pressed() -> void:
 	if but3_current_level != 10:
 		if Global.current_money > upgrade_cost_3:
 			Global.current_money -= upgrade_cost_3
-			Global.coin_gen_time -= 0.15
+			Global.coin_gen_time -= 0.075
 			upgrade_cost_3 += 50
 			but3_current_level += 1
 			up3_lvl.text = "LVL" + str(but3_current_level)
