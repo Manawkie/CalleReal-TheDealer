@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dqgfpvlyf4ok2"]
+[gd_scene load_steps=37 format=3 uid="uid://dqgfpvlyf4ok2"]
 
 [ext_resource type="Texture2D" uid="uid://dimpskamp5oxe" path="res://assets/shop_assets/Untitled13_20241024093603.png" id="1_7knp5"]
 [ext_resource type="Script" path="res://scenes/scripts/my_shop.gd" id="1_dyt7v"]
@@ -6,6 +6,115 @@
 [ext_resource type="PackedScene" uid="uid://46twemes3e6e" path="res://scenes/player_interface.tscn" id="2_r1cgn"]
 [ext_resource type="Texture2D" uid="uid://bfdx2rl2dvri5" path="res://assets/shop_assets/tam (1).png" id="3_80fjn"]
 [ext_resource type="Texture2D" uid="uid://borueqisia0qr" path="res://assets/shop_assets/FREE.png" id="4_6mfcm"]
+[ext_resource type="Texture2D" uid="uid://d14id20x3i38f" path="res://assets/shop_assets/piaya-plain.png" id="7_rsnna"]
+[ext_resource type="Texture2D" uid="uid://b4u3f3q8xb0mf" path="res://assets/shop_assets/poster.jpg" id="7_w6lna"]
+[ext_resource type="Theme" uid="uid://brt22putewp8j" path="res://assets/item_tool_tip.tres" id="8_1ug6o"]
+[ext_resource type="Texture2D" uid="uid://dikj6v7jtoglo" path="res://assets/shop_assets/kfc.png" id="8_ym7dk"]
+[ext_resource type="Texture2D" uid="uid://co24bf455heg1" path="res://assets/shop_assets/lollipop-candy-wnm.png" id="9_xt7kd"]
+[ext_resource type="Texture2D" uid="uid://dxepblafk1v64" path="res://assets/shop_assets/Dried+Sprats-removebg-preview.png" id="10_jyj5p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyrun"]
+texture = ExtResource("7_rsnna")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kh1k2"]
+texture = ExtResource("7_rsnna")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tnqny"]
+texture = ExtResource("7_rsnna")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7544l"]
+texture = ExtResource("7_rsnna")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xdjth"]
+
+[sub_resource type="Theme" id="Theme_an3vo"]
+Button/styles/disabled = SubResource("StyleBoxTexture_eyrun")
+Button/styles/focus = SubResource("StyleBoxTexture_kh1k2")
+Button/styles/hover = SubResource("StyleBoxTexture_tnqny")
+Button/styles/normal = SubResource("StyleBoxTexture_7544l")
+Button/styles/pressed = SubResource("StyleBoxTexture_xdjth")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_plq13"]
+texture = ExtResource("8_ym7dk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q7f7o"]
+texture = ExtResource("8_ym7dk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pqioi"]
+texture = ExtResource("8_ym7dk")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce5nj"]
+texture = ExtResource("8_ym7dk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sabc3"]
+texture = ExtResource("8_ym7dk")
+
+[sub_resource type="Theme" id="Theme_3pgdx"]
+Button/styles/disabled = SubResource("StyleBoxTexture_plq13")
+Button/styles/focus = SubResource("StyleBoxTexture_q7f7o")
+Button/styles/hover = SubResource("StyleBoxTexture_pqioi")
+Button/styles/normal = SubResource("StyleBoxTexture_ce5nj")
+Button/styles/pressed = SubResource("StyleBoxTexture_sabc3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vpu0j"]
+texture = ExtResource("9_xt7kd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2h1y"]
+texture = ExtResource("9_xt7kd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qu3f"]
+texture = ExtResource("9_xt7kd")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hg0u8"]
+texture = ExtResource("9_xt7kd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l51bb"]
+texture = ExtResource("9_xt7kd")
+
+[sub_resource type="Theme" id="Theme_2l4rc"]
+Button/styles/disabled = SubResource("StyleBoxTexture_vpu0j")
+Button/styles/focus = SubResource("StyleBoxTexture_d2h1y")
+Button/styles/hover = SubResource("StyleBoxTexture_0qu3f")
+Button/styles/normal = SubResource("StyleBoxTexture_hg0u8")
+Button/styles/pressed = SubResource("StyleBoxTexture_l51bb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_loi4v"]
+texture = ExtResource("10_jyj5p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sspxg"]
+texture = ExtResource("10_jyj5p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l32fy"]
+texture = ExtResource("10_jyj5p")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_joc1k"]
+texture = ExtResource("10_jyj5p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7uy6v"]
+texture = ExtResource("10_jyj5p")
+
+[sub_resource type="Theme" id="Theme_l1bng"]
+Button/styles/disabled = SubResource("StyleBoxTexture_loi4v")
+Button/styles/focus = SubResource("StyleBoxTexture_sspxg")
+Button/styles/hover = SubResource("StyleBoxTexture_l32fy")
+Button/styles/normal = SubResource("StyleBoxTexture_joc1k")
+Button/styles/pressed = SubResource("StyleBoxTexture_7uy6v")
 
 [node name="MyShop" type="Node2D"]
 script = ExtResource("1_dyt7v")
@@ -42,13 +151,155 @@ rotation = -0.0261799
 scale = Vector2(0.145279, 0.145279)
 texture = ExtResource("4_6mfcm")
 
+[node name="Poster2" type="Sprite2D" parent="Node2D/MainTable"]
+texture_filter = 1
+position = Vector2(-115, -325)
+rotation = -0.0261799
+scale = Vector2(0.20916, 0.20916)
+texture = ExtResource("7_w6lna")
+
 [node name="Spawn_time" type="Timer" parent="."]
 wait_time = 6.0
 
 [node name="items_forsale" type="Node2D" parent="."]
 
-[node name="Button" type="Button" parent="items_forsale"]
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="item1" type="Button" parent="items_forsale"]
+z_index = 2
+offset_left = 89.0
+offset_top = 437.0
+offset_right = 285.0
+offset_bottom = 600.0
+rotation = 0.368264
+theme = SubResource("Theme_an3vo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="items_forsale/item1"]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = -40.0
+offset_right = 303.0
+offset_bottom = 78.0
+rotation = -0.366519
+
+[node name="Label" type="Label" parent="items_forsale/item1"]
+visible = false
+layout_mode = 0
+offset_left = 12.7369
+offset_top = -39.2144
+offset_right = 307.737
+offset_bottom = 61.7856
+rotation = -0.366519
+theme = ExtResource("8_1ug6o")
+text = "prefered by tourist"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="item2" type="Button" parent="items_forsale"]
+z_index = 2
+texture_filter = 1
+offset_left = 241.0
+offset_top = 522.0
+offset_right = 422.0
+offset_bottom = 692.0
+theme = SubResource("Theme_3pgdx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="items_forsale/item2"]
+visible = false
+layout_mode = 0
+offset_left = 14.4119
+offset_top = -79.0
+offset_right = 309.412
+offset_bottom = 39.0
+rotation = 0.00349066
+
+[node name="Label" type="Label" parent="items_forsale/item2"]
+visible = false
+layout_mode = 0
+offset_left = 19.1488
+offset_top = -78.2144
+offset_right = 314.149
+offset_bottom = 22.7856
+rotation = 0.00349066
+theme = ExtResource("8_1ug6o")
+text = "Prefered by guys"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="item3" type="Button" parent="items_forsale"]
+z_index = 2
+offset_left = 491.0
+offset_top = 573.0
+offset_right = 582.0
+offset_bottom = 734.0
+rotation = 0.862193
+theme = SubResource("Theme_2l4rc")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="items_forsale/item3"]
+visible = false
+layout_mode = 0
+offset_left = -70.9935
+offset_top = 4.46139
+offset_right = 224.006
+offset_bottom = 122.461
+rotation = -0.858702
+
+[node name="Label" type="Label" parent="items_forsale/item3"]
+visible = false
+layout_mode = 0
+offset_left = -66.2567
+offset_top = 5.24694
+offset_right = 228.743
+offset_bottom = 106.247
+rotation = -0.858702
+theme = ExtResource("8_1ug6o")
+text = "Prefered by kids"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="item4" type="Button" parent="items_forsale"]
+z_index = 2
+offset_left = 599.0
+offset_top = 609.0
+offset_right = 753.0
+offset_bottom = 763.0
+rotation = 0.616101
+theme = SubResource("Theme_l1bng")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="items_forsale/item4"]
+visible = false
+layout_mode = 0
+offset_left = -25.2681
+offset_top = 6.86325
+offset_right = 269.732
+offset_bottom = 124.863
+rotation = -0.612611
+
+[node name="Label" type="Label" parent="items_forsale/item4"]
+visible = false
+layout_mode = 0
+offset_left = -21.0
+offset_top = 8.0
+offset_right = 271.0
+offset_bottom = 109.0
+rotation = -0.612611
+theme = ExtResource("8_1ug6o")
+text = "prefered by older people"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [connection signal="timeout" from="Spawn_time" to="." method="_on_spawn_time_timeout"]
+[connection signal="mouse_entered" from="items_forsale/item1" to="." method="_on_item_1_mouse_entered"]
+[connection signal="mouse_exited" from="items_forsale/item1" to="." method="_on_item_1_mouse_exited"]
+[connection signal="mouse_entered" from="items_forsale/item2" to="." method="_on_item_2_mouse_entered"]
+[connection signal="mouse_exited" from="items_forsale/item2" to="." method="_on_item_2_mouse_exited"]
+[connection signal="mouse_entered" from="items_forsale/item3" to="." method="_on_item_3_mouse_entered"]
+[connection signal="mouse_exited" from="items_forsale/item3" to="." method="_on_item_3_mouse_exited"]
+[connection signal="pressed" from="items_forsale/item3" to="." method="_on_item_3_pressed"]
+[connection signal="mouse_entered" from="items_forsale/item4" to="." method="_on_item_4_mouse_entered"]
+[connection signal="mouse_exited" from="items_forsale/item4" to="." method="_on_item_4_mouse_exited"]
+[connection signal="pressed" from="items_forsale/item4" to="." method="_on_item_4_pressed"]

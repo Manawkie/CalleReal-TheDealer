@@ -1,6 +1,6 @@
 [
 	{
-		"commands_raw": "Hello ano nami baklon?\n\n?> I completely understand your hesitation, but our research shows that market demand is growing rapidly. Our competitors are still relying on outdated solutions, which gives us a window to capture untapped customers and set the trend. -> dia1\n?> That’s a great question. While the demand may not seem overwhelming right now, we’re actually focusing on niche markets that have high growth potential. Early adopters will drive momentum, and we can expand from there -> dia1\n?> I see your point, but trends can change quickly. I believe that by entering the market now, we can position ourselves as leaders when the demand picks up, rather than playing catch-up -> dia1",
+		"commands_raw": "Hello ano nami baklon?\n\n?> Candy -> dia1\n?> Piyaya -> dia1\n?> KFC -> dia1",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "start",

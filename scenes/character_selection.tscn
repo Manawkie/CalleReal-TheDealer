@@ -1,7 +1,30 @@
-[gd_scene load_steps=3 format=3 uid="uid://c06t6emunw4kn"]
+[gd_scene load_steps=10 format=3 uid="uid://c06t6emunw4kn"]
 
 [ext_resource type="Script" path="res://scenes/scripts/character_selection.gd" id="1_102l7"]
 [ext_resource type="Theme" uid="uid://cu7bkvsimn3a" path="res://components/buttons/button_theme.tres" id="1_pd0hm"]
+[ext_resource type="Texture2D" uid="uid://mlhqbhr7tg0f" path="res://assets/shop_assets/main character.jpg" id="2_xm82f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hlfho"]
+texture = ExtResource("2_xm82f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2cjj"]
+texture = ExtResource("2_xm82f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vr58u"]
+texture = ExtResource("2_xm82f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8a2y3"]
+texture = ExtResource("2_xm82f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lussr"]
+texture = ExtResource("2_xm82f")
+
+[sub_resource type="Theme" id="Theme_fn2s1"]
+Button/styles/disabled = SubResource("StyleBoxTexture_hlfho")
+Button/styles/focus = SubResource("StyleBoxTexture_b2cjj")
+Button/styles/hover = SubResource("StyleBoxTexture_vr58u")
+Button/styles/normal = SubResource("StyleBoxTexture_8a2y3")
+Button/styles/pressed = SubResource("StyleBoxTexture_lussr")
 
 [node name="CharacterSelection" type="Node2D"]
 script = ExtResource("1_102l7")
@@ -11,6 +34,7 @@ offset_left = 824.0
 offset_top = 200.0
 offset_right = 1161.0
 offset_bottom = 648.0
+theme = SubResource("Theme_fn2s1")
 
 [node name="LineEdit" type="LineEdit" parent="."]
 offset_left = 747.0
@@ -28,5 +52,6 @@ offset_top = 863.0
 offset_right = 1826.0
 offset_bottom = 982.0
 theme = ExtResource("1_pd0hm")
+text = "PLAY"
 
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]

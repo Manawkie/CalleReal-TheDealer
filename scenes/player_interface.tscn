@@ -1,14 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://46twemes3e6e"]
+[gd_scene load_steps=14 format=3 uid="uid://46twemes3e6e"]
 
 [ext_resource type="Texture2D" uid="uid://by5ux0gvyqray" path="res://assets/gui_asset/bar_1.png" id="1_4fovq"]
 [ext_resource type="Script" path="res://scenes/scripts/player_interface.gd" id="1_i4f0s"]
 [ext_resource type="Texture2D" uid="uid://dbtb0m33j14bf" path="res://assets/gui_asset/bar_2.png" id="2_74vj1"]
 [ext_resource type="Texture2D" uid="uid://dgg1viwc4w8wg" path="res://assets/shop_assets/Untitled6_20241023132958.png" id="3_0sf32"]
 [ext_resource type="FontFile" uid="uid://batjodd5b3262" path="res://assets/GROBOLD.ttf" id="4_i14jk"]
+[ext_resource type="Texture2D" uid="uid://bac45l43r4l3j" path="res://assets/shop_assets/pause.png" id="6_addn4"]
 
 [sub_resource type="Theme" id="Theme_113gk"]
 Label/font_sizes/font_size = 50
 Label/fonts/font = ExtResource("4_i14jk")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wk1qm"]
+texture = ExtResource("6_addn4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2q0f"]
+texture = ExtResource("6_addn4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nof6a"]
+texture = ExtResource("6_addn4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7eqj"]
+texture = ExtResource("6_addn4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_10ac8"]
+texture = ExtResource("6_addn4")
+
+[sub_resource type="Theme" id="Theme_vvnmk"]
+Button/styles/disabled = SubResource("StyleBoxTexture_wk1qm")
+Button/styles/focus = SubResource("StyleBoxTexture_d2q0f")
+Button/styles/hover = SubResource("StyleBoxTexture_nof6a")
+Button/styles/normal = SubResource("StyleBoxTexture_k7eqj")
+Button/styles/pressed = SubResource("StyleBoxTexture_10ac8")
 
 [node name="PlayerInterface" type="Control"]
 layout_mode = 3
@@ -33,20 +56,32 @@ texture_progress = ExtResource("2_74vj1")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 1617.0
-offset_top = 143.0
-offset_right = 1894.0
-offset_bottom = 420.0
+offset_left = 1492.0
+offset_top = -56.0
+offset_right = 1769.0
+offset_bottom = 221.0
 texture = ExtResource("3_0sf32")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1703.0
-offset_top = 236.0
-offset_right = 1820.0
-offset_bottom = 352.0
+offset_left = 1578.0
+offset_top = 37.0
+offset_right = 1695.0
+offset_bottom = 153.0
 theme = SubResource("Theme_113gk")
 text = "100"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+top_level = true
+z_index = 10
+layout_mode = 0
+offset_left = 1786.0
+offset_top = 22.0
+offset_right = 1909.0
+offset_bottom = 143.0
+theme = SubResource("Theme_vvnmk")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

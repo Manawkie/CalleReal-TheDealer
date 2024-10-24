@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn5m0g7m4c0d8"]
+
+[ext_resource type="Script" path="res://scenes/scripts/walking_character.gd" id="1_dcadk"]
+[ext_resource type="Texture2D" uid="uid://c363wtjtewk4i" path="res://assets/shop_assets/Untitled9_20241023150049.png" id="2_votdf"]
+
+[node name="WalkingCharacter" type="Node2D"]
+z_index = 3
+script = ExtResource("1_dcadk")
+
+[node name="character" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(2044, 431)
+scale = Vector2(0.522222, 0.522222)
+texture = ExtResource("2_votdf")
+
+[node name="walking" type="Timer" parent="character"]
+wait_time = 0.05
+
+[connection signal="timeout" from="character/walking" to="." method="_on_walking_timeout"]
