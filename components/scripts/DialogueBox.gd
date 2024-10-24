@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var choice_button_scene = preload("res://components/ChoiceButton.tscn")
 @onready var choice_container = $DialogueBoxContainer
-@onready var question_container = $QuestionContainer
+@onready var question_container = $"../Sprite2D/QuestionContainer"
 @onready var ez_dialogue = $"../EzDialogue"
 
 var choice_buttons : Array[Button] = []

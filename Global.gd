@@ -1,7 +1,7 @@
 extends Node
 
 
-var current_money = 99999
+var current_money = 100
 var player_name = ""
 var max_right = 500
 var max_left = 500
@@ -19,10 +19,8 @@ var spawn_time_cd = 60
 var success_deal = 100
 
 
-func _process(delta: float) -> void:
-	if current_money > 10000:
-		win()
+
 		
-		
-func win():
-	pass
+var character_image 
+
+var can_play_dialogue = true

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnsr7otdbv7yp"]
+
+[ext_resource type="Script" path="res://components/scripts/character.gd" id="1_yecpu"]
+[ext_resource type="Texture2D" uid="uid://ntuo6nl6twtv" path="res://assets/shop_assets/Untitled10_20241023154653.png" id="2_x2t1d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f6p1j"]
+radius = 142.651
+height = 821.205
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_yecpu")
+
+[node name="character" type="Sprite2D" parent="."]
+visibility_layer = 2
+z_index = 1
+position = Vector2(2036, 940)
+scale = Vector2(0.51875, 0.51875)
+texture = ExtResource("2_x2t1d")
+
+[node name="Area2D" type="Area2D" parent="character"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="character/Area2D"]
+position = Vector2(-1.92818, 67.4699)
+shape = SubResource("CapsuleShape2D_f6p1j")
+
+[node name="walking" type="Timer" parent="character"]
+wait_time = 0.025
+
+[connection signal="input_event" from="character/Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="character/walking" to="." method="_on_walking_timeout"]

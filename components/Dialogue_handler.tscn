@@ -16,6 +16,9 @@
 [ext_resource type="JSON" path="res://dialogues/8dialogue.json" id="9_fow0n"]
 
 [node name="Dialogue_handler" type="Control"]
+light_mask = 16
+visibility_layer = 16
+z_index = 4
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,9 +35,24 @@ offset_bottom = 1084.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(888, 649)
-scale = Vector2(1.97708, 1.97708)
+position = Vector2(930.563, 388.563)
+scale = Vector2(2.27465, 2.27465)
 texture = ExtResource("6_05iyd")
+
+[node name="QuestionContainer" type="Label" parent="Sprite2D"]
+texture_filter = 1
+anchors_preset = -1
+anchor_right = 1.65
+anchor_bottom = 0.961111
+offset_left = -130.0
+offset_top = -98.0
+offset_right = 123.0
+offset_bottom = 45.0
+scale = Vector2(0.3, 0.3)
+theme = ExtResource("3_p6y3s")
+autowrap_mode = 3
+justification_flags = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 visible = false
@@ -79,17 +97,11 @@ offset_right = 1816.0
 offset_bottom = 638.0
 alignment = 1
 
-[node name="QuestionContainer" type="Label" parent="DialogueBox"]
-offset_left = 630.0
-offset_top = 455.0
-offset_right = 1074.0
-offset_bottom = 675.0
-theme = ExtResource("3_p6y3s")
-autowrap_mode = 3
-justification_flags = 0
-
 [node name="EzDialogue" type="Node" parent="."]
 script = ExtResource("4_j8pvr")
+
+[node name="talker" type="Sprite2D" parent="."]
+position = Vector2(390, 668)
 
 [connection signal="custom_signal_received" from="EzDialogue" to="." method="_on_ez_dialogue_custom_signal_received"]
 [connection signal="dialogue_generated" from="EzDialogue" to="." method="_on_ez_dialogue_dialogue_generated"]

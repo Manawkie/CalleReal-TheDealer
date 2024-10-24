@@ -6,8 +6,7 @@ extends Control
 }
 @onready var dia_box_handler = $DialogueBox
 @onready var dia_handler = $"."
-@onready var question = $DialogueBox/QuestionContainer
-@onready var character_load = preload("res://scenes/character_selection.tscn")
+@onready var question = $Sprite2D/QuestionContainer
 var player_name : String = Global.player_name
 var point: int = 0
 
@@ -17,6 +16,8 @@ var point: int = 0
 
 func _ready() -> void:
 	($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[randi() % list_of_dialogue.size()], state)
+	$talker.texture = Global.character_image
+	
 	
 
 
@@ -30,7 +31,7 @@ func _process(delta: float) -> void:
 			if Global.point < 7:
 				Global.current_money -= 150
 				Global.point = 0
-				
+		Global.can_play_dialogue = true
 		queue_free()
 		
 	
