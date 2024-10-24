@@ -15,7 +15,17 @@ var point: int = 0
 
 
 func _ready() -> void:
-	($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[randi() % list_of_dialogue.size()], state)
+	if Global.character_image == Global.tourist:
+		($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[4], state)
+		
+	if Global.character_image == Global.kid:
+		($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[1], state)
+		
+	if Global.character_image == Global.gangster:
+		($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[3], state)
+	
+	if Global.character_image == Global.granny:
+		($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[2], state)
 	$talker.texture = Global.character_image
 	
 	
@@ -23,14 +33,25 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if question.text == "end":
-		if Global.point >= 7:
-			Global.current_money += Global.success_deal
-			Global.point = 0
+		Global.current_money += 50
+		Global.can_play_dialogue = true
+		queue_free()
 			
-		else:
-			if Global.point < 7:
-				Global.current_money -= 150
-				Global.point = 0
+	if question.text == "sale":
+		Global.progress += 1
+		Global.current_money += 100
+		Global.can_play_dialogue = true
+		queue_free()
+		
+	if question.text == "sale+":
+		Global.progress += 1
+		Global.current_money += 150
+		Global.can_play_dialogue = true
+		queue_free()
+	
+	if question.text == "aws":
+		Global.progress -= 1
+		Global.current_money -= 50
 		Global.can_play_dialogue = true
 		queue_free()
 		

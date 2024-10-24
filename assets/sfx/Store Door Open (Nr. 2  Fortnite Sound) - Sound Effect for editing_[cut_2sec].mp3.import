@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqkrtvlknkvrn"
+path="res://.godot/imported/Store Door Open (Nr. 2  Fortnite Sound) - Sound Effect for editing_[cut_2sec].mp3-9bcccc10c8b58d4cfd109d36ab1e43d8.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Store Door Open (Nr. 2  Fortnite Sound) - Sound Effect for editing_[cut_2sec].mp3"
+dest_files=["res://.godot/imported/Store Door Open (Nr. 2  Fortnite Sound) - Sound Effect for editing_[cut_2sec].mp3-9bcccc10c8b58d4cfd109d36ab1e43d8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

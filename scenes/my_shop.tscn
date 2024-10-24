@@ -1,8 +1,9 @@
-[gd_scene load_steps=37 format=3 uid="uid://dqgfpvlyf4ok2"]
+[gd_scene load_steps=38 format=3 uid="uid://dqgfpvlyf4ok2"]
 
 [ext_resource type="Texture2D" uid="uid://dimpskamp5oxe" path="res://assets/shop_assets/Untitled13_20241024093603.png" id="1_7knp5"]
 [ext_resource type="Script" path="res://scenes/scripts/my_shop.gd" id="1_dyt7v"]
 [ext_resource type="Texture2D" uid="uid://top511dtaj62" path="res://assets/shop_assets/Untitled13_20241023154129.png" id="2_3f5cs"]
+[ext_resource type="PackedScene" uid="uid://buwrgoeyg10lt" path="res://scenes/Win.tscn" id="2_h1fit"]
 [ext_resource type="PackedScene" uid="uid://46twemes3e6e" path="res://scenes/player_interface.tscn" id="2_r1cgn"]
 [ext_resource type="Texture2D" uid="uid://bfdx2rl2dvri5" path="res://assets/shop_assets/tam (1).png" id="3_80fjn"]
 [ext_resource type="Texture2D" uid="uid://borueqisia0qr" path="res://assets/shop_assets/FREE.png" id="4_6mfcm"]
@@ -118,6 +119,11 @@ Button/styles/pressed = SubResource("StyleBoxTexture_7uy6v")
 
 [node name="MyShop" type="Node2D"]
 script = ExtResource("1_dyt7v")
+
+[node name="Win" parent="." instance=ExtResource("2_h1fit")]
+visible = false
+top_level = true
+z_index = 10
 
 [node name="PlayerInterface" parent="." instance=ExtResource("2_r1cgn")]
 z_index = 3

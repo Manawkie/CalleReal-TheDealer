@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnsr7otdbv7yp"]
+[gd_scene load_steps=6 format=3 uid="uid://cnsr7otdbv7yp"]
 
 [ext_resource type="Script" path="res://components/scripts/character.gd" id="1_yecpu"]
+[ext_resource type="AudioStream" uid="uid://dqkrtvlknkvrn" path="res://assets/sfx/Store Door Open (Nr. 2  Fortnite Sound) - Sound Effect for editing_[cut_2sec].mp3" id="2_habvd"]
 [ext_resource type="Texture2D" uid="uid://ntuo6nl6twtv" path="res://assets/shop_assets/Untitled10_20241023154653.png" id="2_x2t1d"]
+[ext_resource type="AudioStream" uid="uid://cwetv5mp2jchk" path="res://assets/sfx/Male Grunts - Sound Effect for editing_[cut_0sec].mp3" id="3_ranjy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f6p1j"]
 radius = 142.651
@@ -9,6 +11,12 @@ height = 821.205
 
 [node name="Character" type="Node2D"]
 script = ExtResource("1_yecpu")
+
+[node name="DoorSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_habvd")
+
+[node name="RobberSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ranjy")
 
 [node name="character" type="Sprite2D" parent="."]
 visibility_layer = 2

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwetv5mp2jchk"
+path="res://.godot/imported/Male Grunts - Sound Effect for editing_[cut_0sec].mp3-210452fb634883665b2ab9678624c547.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/Male Grunts - Sound Effect for editing_[cut_0sec].mp3"
+dest_files=["res://.godot/imported/Male Grunts - Sound Effect for editing_[cut_0sec].mp3-210452fb634883665b2ab9678624c547.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

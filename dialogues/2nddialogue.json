@@ -1,42 +1,82 @@
 [
 	{
-		"commands_raw": "Thanks for the introduction. I’m interested in the idea, but I’m concerned about your revenue model. How do you plan to generate consistent revenue without heavily relying on external funding?\n\n?> That’s a great question. Our revenue model is subscription-based, which ensures a predictable, recurring income stream. We’ve designed it to be flexible for different customer needs, and we’re already seeing strong interest in long-term subscriptions.-> dia2\n\n?> While we may rely on some external funding initially, our goal is to shift toward sustainable, organic growth. Our early customer feedback has been overwhelmingly positive, and we’re building out a tiered pricing model to cater to a wide range of clients -> dia2\n\n?> I understand your concern. While we’re still exploring different revenue models, we plan to diversify through a combination of direct sales, licensing, and strategic partnerships to ensure steady income -> dia2",
+		"commands_raw": "Ano mayo sa gina baligya mo noy?\n\n?> May uga kami di nay -> dia1\n?> May ari man di piyaya, basi gusto mo -> dia2\n?> May Fried chicken man di, namit ni -> dia3",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "start",
 		"position": [
-			-200,
-			80
+			-280,
+			60
 		]
 	},
 	{
-		"commands_raw": "That sounds promising, but I’m still worried about customer acquisition. How do you plan to attract enough customers without spending a fortune on marketing?\n\n?> We’ve already established a robust referral program that encourages our existing customers to spread the word, which has reduced our customer acquisition costs significantly. We’re also investing in content marketing and SEO to attract organic traffic -> dia3\n\n\n?> We plan to leverage strategic partnerships to gain access to large customer bases without high acquisition costs. We’ve also developed a strong inbound marketing strategy to build brand awareness and drive leads through content and social proof. -> dia3\n\n?> Customer acquisition is definitely a key area for us, but we’re confident that our product’s unique value will drive word-of-mouth referrals. Our initial beta testers have already shared it with their networks, which is helping us grow organically -> dia3",
+		"commands_raw": "Daw namit tuod mag uga, ano na klase uga? \n\n?> Amo ni ang pinaka namit nga uga nga ma tilawan mo -> dia1-1\n?> Huo, namit gid man ina. Namit na, barato pa. -> dia1-2",
+		"gnode_name": "dia1",
+		"id": 4,
+		"name": "dia1",
+		"position": [
+			-100,
+			-20
+		]
+	},
+	{
+		"commands_raw": "Bawal na ko mag piyaya kay may diabetes na ko\n\n?> Ay tuod ka? Pasensya gid nay ha -> dia2-1",
 		"gnode_name": "dia2",
-		"id": 1,
+		"id": 5,
 		"name": "dia2",
 		"position": [
-			-80,
-			80
+			-100,
+			60
 		]
 	},
 	{
-		"commands_raw": "Okay, that helps, but I still have one big concern: how do you plan to handle market saturation? There are already so many companies offering similar solutions. What makes you stand out?\n\n?> Our competitive edge is in our technology. We’ve developed proprietary software that is not only faster and more efficient than existing solutions but also more customizable. This allows us to meet specific needs that other companies can’t. -> dia4\n\n?> That’s a valid point, but we’ve focused on creating a highly personalized customer experience. Our customer service and product customization options are where we excel, ensuring that our users feel they’re getting something tailored specifically for them -> dia4\n\n?> While the market may seem saturated, our niche focus gives us an advantage. By targeting a specific, underserved demographic, we believe we can carve out a loyal customer base without directly competing with larger players -> dia4",
+		"commands_raw": "Hindi na ko maka kaon fried chicken kay wala na ko ngipon\n\n?> Ay tuod ka? Pasensya gid nay ha -> dia3-1\n",
 		"gnode_name": "dia3",
-		"id": 2,
+		"id": 6,
 		"name": "dia3",
 		"position": [
-			80,
-			80
+			-100,
+			140
+		]
+	},
+	{
+		"commands_raw": "sale+",
+		"gnode_name": "dia1-1",
+		"id": 7,
+		"name": "dia1-1",
+		"position": [
+			100,
+			-120
+		]
+	},
+	{
+		"commands_raw": "sale",
+		"gnode_name": "dia1-2",
+		"id": 8,
+		"name": "dia1-2",
+		"position": [
+			100,
+			-60
+		]
+	},
+	{
+		"commands_raw": "aws",
+		"gnode_name": "dia3-1",
+		"id": 9,
+		"name": "dia3-1",
+		"position": [
+			100,
+			140
 		]
 	},
 	{
 		"commands_raw": "end",
-		"gnode_name": "dia4",
-		"id": 3,
-		"name": "dia4",
+		"gnode_name": "dia2-1",
+		"id": 10,
+		"name": "dia2-1",
 		"position": [
-			240,
-			80
+			100,
+			60
 		]
 	}
 ]

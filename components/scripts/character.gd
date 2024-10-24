@@ -32,11 +32,14 @@ func _ready() -> void:
 	
 	
 	
-	
-	npc.texture = npc_list[image_index]
+	if Global.only_spawn_robber:
+		npc.texture = robber
+	else:
+		npc.texture = npc_list[image_index]
 	npc.position = starting_pos
 	npc.scale = image_scale
 	$character/walking.start()
+	$DoorSound.play()
 
 func _on_walking_timeout() -> void:
 	if walking_stages == 1:
@@ -61,20 +64,28 @@ func _on_walking_timeout() -> void:
 			npc.position.y += 1.7785
 			$character/walking.start()
 		else:
-			queue_free()
+			if npc.texture == robber:
+				Global.current_money -= 50
+				queue_free()
+			else:
+				queue_free()
 	
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_action_just_released("left_click"):
-		if Global.can_play_dialogue:
-			$character/walking.stop()
-			Global.character_image = npc.texture
-			$character.queue_free()
-			var load_dialogue = load("res://components/Dialogue_handler.tscn")
-			var loaded_dialogue = load_dialogue.instantiate()
-			add_child(loaded_dialogue)
-			Global.can_play_dialogue = false
-			await get_tree().create_timer(1.5).timeout
+		if npc.texture != robber:
+			if Global.can_play_dialogue:
+				$character/walking.stop()
+				Global.character_image = npc.texture
+				$character.queue_free()
+				var load_dialogue = load("res://components/Dialogue_handler.tscn")
+				var loaded_dialogue = load_dialogue.instantiate()
+				add_child(loaded_dialogue)
+				Global.can_play_dialogue = false
+				await get_tree().create_timer(1.5).timeout
+		else:
+			$RobberSound.play()
+			queue_free()
 		
 		

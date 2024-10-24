@@ -1,32 +1,32 @@
 [
 	{
-		"commands_raw": "Hello ano nami baklon?\n\n?> Candy -> dia1\n?> Piyaya -> dia1\n?> KFC -> dia1",
+		"commands_raw": "Hello ano nami baklon?\n\n?> Candy -> dia1\n?> Piyaya -> dia2\n?> KFC -> dia3\n",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "start",
 		"position": [
-			240,
+			-60,
 			100
 		]
 	},
 	{
-		"commands_raw": "That’s an interesting perspective. But my main concern is your scalability. How do you plan to grow without burning through a lot of capital?\n\n?> Great question, and we’ve already thought that through. Our business model is designed for lean growth, focusing on organic customer acquisition through word-of-mouth and referral programs rather than expensive marketing campaigns -> dia2\n\n?> We’ve structured our operations to scale efficiently. Our core technology is built to handle significant growth with minimal additional cost, and we’re focusing on securing strategic partnerships to fuel that expansion without straining our budget. -> dia2\n\n?> I understand your concern, and scaling does require careful planning. We plan to take it step by step, reinvesting profits rather than relying solely on external funding for expansion -> dia2",
+		"commands_raw": "sure ka namit na?\n\n?> oo namit ni -> dia1-1\n?> oo na bakla na basi pa sang iban -> dia1-2\n?> oo namit ni barato pa -> dia1-3\n\n",
 		"gnode_name": "dia1",
 		"id": 4,
 		"name": "dia1",
 		"position": [
-			360,
-			100
+			80,
+			-80
 		]
 	},
 	{
-		"commands_raw": "That’s good to hear. However, I still need to know how you’re going to handle competition. There are bigger players in this space with more resources. What makes you think you can win against them?\n\n?> That’s a fair point. What makes us stand out is our agility. Larger companies are slower to innovate and adapt. We can respond to market changes faster and introduce features that our competitors can’t deploy as quickly. -> dia3\n\n?> We have a clear advantage in terms of customer focus. Our direct interaction with early adopters allows us to refine our product based on real-time feedback, something bigger companies struggle to do at scale -> dia3\n\n?> We may be smaller, but that’s where our strength lies. We don’t need to be the biggest player to be successful; we just need to carve out a loyal, niche customer base that values our unique offering -> dia3",
+		"commands_raw": "di ko ni gusto\n\n?> candy na lang eh gustohon mo pa -> dia1",
 		"gnode_name": "dia2",
 		"id": 5,
 		"name": "dia2",
 		"position": [
-			540,
-			100
+			120,
+			180
 		]
 	},
 	{
@@ -35,8 +35,38 @@
 		"id": 6,
 		"name": "dia3",
 		"position": [
-			700,
-			100
+			120,
+			320
+		]
+	},
+	{
+		"commands_raw": "sale",
+		"gnode_name": "dia1-1",
+		"id": 7,
+		"name": "dia1-1",
+		"position": [
+			240,
+			-180
+		]
+	},
+	{
+		"commands_raw": "sale",
+		"gnode_name": "dia1-2",
+		"id": 8,
+		"name": "dia1-2",
+		"position": [
+			240,
+			-100
+		]
+	},
+	{
+		"commands_raw": "sale",
+		"gnode_name": "dia1-3",
+		"id": 9,
+		"name": "dia1-3",
+		"position": [
+			240,
+			-20
 		]
 	}
 ]

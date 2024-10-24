@@ -1,6 +1,6 @@
 [
 	{
-		"commands_raw": "I need clarity on your exit strategy. Investors like me want to know how we’ll see returns in the long term. What’s your plan?\n\n?> We’re targeting a strategic acquisition as our primary exit. There’s strong interest from larger players in our industry looking to expand their portfolios. With our unique product, we’re positioning ourselves to be an attractive acquisition target within the next 3-5 years. -> dia1\n\n?> We’re keeping our options open. While an acquisition is a likely outcome, we’re also building toward a potential IPO once we’ve captured significant market share. Either way, we’re focused on creating strong returns for investors like you -> dia1\n\n?> I understand the importance of an exit strategy. While we don’t have a fixed timeline yet, we’re confident that with our projected growth, we’ll be in a strong position for acquisition or buyout within the next few years -> dia1",
+		"commands_raw": "What can you offer for me today?\n\n?> we have here dried fish -> dia1\n?> we have fried chicken -> dia2\n?> we have candies -> dia3\n?> and we also have piyaya -> dia4",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "start",
@@ -10,33 +10,83 @@
 		]
 	},
 	{
-		"commands_raw": "Interesting. But how do you plan to scale your operations as demand grows? It’s one thing to have a great product, but meeting increased demand requires substantial operational infrastructure.\n\n?> We’ve already secured partnerships with key suppliers and logistics providers to ensure we can scale seamlessly. Our operations are designed for efficiency, and we’ve built in flexibility to ramp up production without major disruptions -> dia2\n\n?> We’re focused on sustainable scaling. We’ve invested in automation and streamlined processes, which allows us to increase capacity without proportionally increasing costs. This will enable us to meet growing demand efficiently. -> dia2\n\n?> You’re right, scaling is critical. We plan to gradually expand our operations to match demand. We’re taking a measured approach to ensure we don’t overextend ourselves -> dia2",
+		"commands_raw": "nah dude that aint for me I dont like how that smell\n\n?> Im so sorry about that -> dia1-1",
 		"gnode_name": "dia1",
 		"id": 1,
 		"name": "dia1",
 		"position": [
-			-100,
-			80
+			-140,
+			-20
 		]
 	},
 	{
-		"commands_raw": "That makes sense, but I’m also concerned about your team. You have a small team right now—do they have the experience needed to guide the company through rapid expansion?\n\n?> Absolutely. Our core team brings a wealth of experience from leading companies in the industry. We’ve also already identified key hires we’ll bring on board as we scale, ensuring we have the expertise to manage growth effectively. -> dia3\n\n?> We may be small, but our team is highly skilled, and we’re very selective about who we bring in. As we grow, we’ll continue to expand our talent pool with seasoned professionals who can drive the company’s vision forward -> dia3\n\n?> Our team has the passion and drive to succeed, and while we’re small, we believe in growing organically. As demand increases, we’ll bring in the right people to guide us through that growth -> dia3",
+		"commands_raw": "Yeah thats alright I mean theres no way you could get wrong with fried chicken\n\n?> im sure you wont regret it -> dia2-1",
 		"gnode_name": "dia2",
 		"id": 2,
 		"name": "dia2",
 		"position": [
-			60,
+			-140,
+			80
+		]
+	},
+	{
+		"commands_raw": "Nope, I cant have sweets right now\n\n?> Oh, Im sorry about that -> dia3-1\n?> Oh, im sorry about that. Why dont you try our piyaya Its good -> dia4",
+		"gnode_name": "dia3",
+		"id": 3,
+		"name": "dia3",
+		"position": [
+			-140,
+			160
+		]
+	},
+	{
+		"commands_raw": "Ooh thats interesting I'll take one\n\n?> Thank you, im sure you wont regret it -> dia4-1\n\n",
+		"gnode_name": "dia4",
+		"id": 4,
+		"name": "dia4",
+		"position": [
+			-140,
+			240
+		]
+	},
+	{
+		"commands_raw": "sale+",
+		"gnode_name": "dia4-1",
+		"id": 5,
+		"name": "dia4-1",
+		"position": [
+			0,
+			240
+		]
+	},
+	{
+		"commands_raw": "sale",
+		"gnode_name": "dia2-1",
+		"id": 6,
+		"name": "dia2-1",
+		"position": [
+			20,
 			80
 		]
 	},
 	{
 		"commands_raw": "end",
-		"gnode_name": "dia3",
-		"id": 3,
-		"name": "dia3",
+		"gnode_name": "dia3-1",
+		"id": 7,
+		"name": "dia3-1",
 		"position": [
-			180,
-			80
+			20,
+			160
+		]
+	},
+	{
+		"commands_raw": "aws",
+		"gnode_name": "dia1-1",
+		"id": 8,
+		"name": "dia1-1",
+		"position": [
+			0,
+			-20
 		]
 	}
 ]

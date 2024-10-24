@@ -3,9 +3,12 @@ extends Control
 @onready var money = $Label
 
 @onready var blur = $"../ColorRect"
+@onready var progress = $TextureProgressBar
+
 
 func _process(delta: float) -> void:
 	money.text = str(Global.current_money)
+	progress.value = Global.progress
 	
 	
 

@@ -19,6 +19,15 @@ func _process(delta: float) -> void:
 		spawn_npc_buyer()
 	if Input.is_action_just_pressed("mid"):
 		spawn_npc_walker()
+	
+	if Input.is_action_just_pressed("spawn_robber"):
+		if Global.only_spawn_robber:
+			Global.only_spawn_robber = false
+		else:
+			Global.only_spawn_robber = true
+	
+	if Input.is_action_just_pressed("spawn"):
+		spawn_npc_buyer()
 		
 func spawn_npc_buyer():
 	var preload_npc = load("res://components/characters/character.tscn")
@@ -29,6 +38,8 @@ func spawn_npc_buyer():
 func spawn_npc_walker():
 	add_child((load("res://scenes/walking_character.tscn")).instantiate())
 
+func spawn_robber():
+	pass
 
 func _on_spawn_time_timeout() -> void:
 	spawn_npc_buyer()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd738qjt3by1s"
+path="res://.godot/imported/CROWD CHEER SOUND EFFECT.mp3-b015a93bec176e08e4c62ed6ffe3755b.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/CROWD CHEER SOUND EFFECT.mp3"
+dest_files=["res://.godot/imported/CROWD CHEER SOUND EFFECT.mp3-b015a93bec176e08e4c62ed6ffe3755b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
