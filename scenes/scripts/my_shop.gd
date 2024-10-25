@@ -17,7 +17,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("right_click"):
 		spawn_npc_buyer()
-	if Input.is_action_just_pressed("mid"):
+	if Input.is_action_just_pressed("spawn_noise"):
 		spawn_npc_walker()
 	
 	if Input.is_action_just_pressed("spawn_robber"):

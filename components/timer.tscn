@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwmphccxqqc6q"]
+
+[ext_resource type="Script" path="res://components/timer.gd" id="1_7ki2u"]
+[ext_resource type="Script" path="res://scenes/scripts/panel.gd" id="1_suw16"]
+[ext_resource type="Theme" uid="uid://brt22putewp8j" path="res://assets/item_tool_tip.tres" id="2_7nfju"]
+
+[node name="Timer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ki2u")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 1322.0
+offset_top = 37.0
+offset_right = 1475.0
+offset_bottom = 75.0
+script = ExtResource("1_suw16")
+
+[node name="Minutes" type="Label" parent="Panel"]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 45.0
+theme = ExtResource("2_7nfju")
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Seconds" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 8.0
+offset_right = 100.0
+offset_bottom = 45.0
+theme = ExtResource("2_7nfju")
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Msecs" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = 8.0
+offset_right = 153.0
+offset_bottom = 45.0
+theme = ExtResource("2_7nfju")
+text = "00"

@@ -30,3 +30,6 @@ var character_image
 var can_play_dialogue = true
 var progress = 0
 var only_spawn_robber = false
+var best_time
+var win_lose = false
+var _isrestarted = false

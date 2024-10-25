@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dqgfpvlyf4ok2"]
+[gd_scene load_steps=40 format=3 uid="uid://dqgfpvlyf4ok2"]
 
 [ext_resource type="Texture2D" uid="uid://dimpskamp5oxe" path="res://assets/shop_assets/Untitled13_20241024093603.png" id="1_7knp5"]
 [ext_resource type="Script" path="res://scenes/scripts/my_shop.gd" id="1_dyt7v"]
@@ -13,6 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://dikj6v7jtoglo" path="res://assets/shop_assets/kfc.png" id="8_ym7dk"]
 [ext_resource type="Texture2D" uid="uid://co24bf455heg1" path="res://assets/shop_assets/lollipop-candy-wnm.png" id="9_xt7kd"]
 [ext_resource type="Texture2D" uid="uid://dxepblafk1v64" path="res://assets/shop_assets/Dried+Sprats-removebg-preview.png" id="10_jyj5p"]
+[ext_resource type="AudioStream" uid="uid://dkjt5hr0hpg61" path="res://assets/sfx/Grocery store (supermarket) ambient noise - Sound effects.mp3" id="14_oxxja"]
+[ext_resource type="AudioStream" uid="uid://bn6nqd65m2ek4" path="res://assets/sfx/[BGM  Free Music Download] Bell Song - UmbrTone   Cute  Sweet  Happy Background Music.mp3" id="15_cm10e"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eyrun"]
 texture = ExtResource("7_rsnna")
@@ -165,7 +167,7 @@ scale = Vector2(0.20916, 0.20916)
 texture = ExtResource("7_w6lna")
 
 [node name="Spawn_time" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 4.0
 
 [node name="items_forsale" type="Node2D" parent="."]
 
@@ -297,6 +299,16 @@ text = "prefered by older people"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_oxxja")
+volume_db = 1.825
+autoplay = true
+
+[node name="bgm2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_cm10e")
+volume_db = 1.825
+autoplay = true
 
 [connection signal="timeout" from="Spawn_time" to="." method="_on_spawn_time_timeout"]
 [connection signal="mouse_entered" from="items_forsale/item1" to="." method="_on_item_1_mouse_entered"]

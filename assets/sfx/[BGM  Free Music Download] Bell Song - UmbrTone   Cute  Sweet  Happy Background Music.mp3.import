@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bn6nqd65m2ek4"
+path="res://.godot/imported/[BGM  Free Music Download] Bell Song - UmbrTone   Cute  Sweet  Happy Background Music.mp3-44975b6594999a5c3687bc5cbdb5cc3f.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/[BGM  Free Music Download] Bell Song - UmbrTone   Cute  Sweet  Happy Background Music.mp3"
+dest_files=["res://.godot/imported/[BGM  Free Music Download] Bell Song - UmbrTone   Cute  Sweet  Happy Background Music.mp3-44975b6594999a5c3687bc5cbdb5cc3f.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

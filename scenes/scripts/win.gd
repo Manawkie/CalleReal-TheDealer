@@ -15,8 +15,10 @@ func _process(delta: float) -> void:
 			get_tree().paused = true
 			add_child((load("res://scenes/pause_menu.tscn").instantiate()))
 			havent_cheer = false
+			Global.win_lose = true
 	if Global.current_money < 0:
 		get_tree().paused = true
 		add_child((load("res://scenes/pause_menu.tscn").instantiate()))
 		$YouWIn.text = "YOU LOSE!"
 		visible = true
+		Global.win_lose = true

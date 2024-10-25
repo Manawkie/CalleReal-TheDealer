@@ -6,9 +6,15 @@ extends Control
 @onready var progress = $TextureProgressBar
 
 
+
+
 func _process(delta: float) -> void:
 	money.text = str(Global.current_money)
 	progress.value = Global.progress
+	if Global._isrestarted:
+		get_tree().reload_current_scene()
+		Global._isrestarted = false
+	
 	
 	
 
