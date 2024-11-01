@@ -1,42 +1,82 @@
 [
 	{
-		"commands_raw": "I like what I see, but I’m a bit skeptical about your market penetration strategy. How do you plan to capture market share, especially given that there are already several established players?\n\n?> We’re focused on rapid customer acquisition through aggressive digital marketing campaigns and influencer partnerships. By building brand recognition quickly and securing early adopters, we’ll establish ourselves before larger players take notice -> dia1\n\n?> Our strategy focuses on under-served segments within the market. By targeting niche audiences that the bigger players overlook, we can capture significant market share. We also have a partnership in place that gives us exclusive access to a key distribution channel, giving us a competitive edge. -> dia1\n\n?> We plan to differentiate ourselves with a unique customer experience and superior service. Our goal is to build strong relationships with early customers and let word-of-mouth drive our initial growth -> dia1",
+		"commands_raw": "Hi I would like to buy something, can you recommend me some?\n\n?> Try buying our candy it is not that sweet and it is affordable -> dia1\n\n?> Check out our dried fish the locals love it -> dia2\n\n?> Would you like to try our specialty which is piyaya -> dia3\n",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "start",
 		"position": [
-			-640,
+			-680,
 			0
 		]
 	},
 	{
-		"commands_raw": "Interesting, but I’m also concerned about scalability. How do you plan to grow while maintaining efficiency and keeping costs under control?\n\n?> We’re planning a step-by-step scaling approach to ensure we don’t outgrow our capacity too quickly. By gradually expanding production and hiring, we’ll keep our costs manageable while continuing to grow steadil -> dia2\n\n?> Scalability is built into our business model. We’ve streamlined our processes and use a hybrid model of in-house development and outsourced support to ensure we can grow without taking on unnecessary overhead. We’ll be able to scale without sacrificing profitability -> dia2\n\n?> We’ve designed our operations to scale efficiently from the start. We’re leveraging automation in key areas, and we’ve implemented a lean supply chain model that allows us to scale without a significant increase in overhead. This ensures we can grow rapidly without losing control of costs. -> dia2",
+		"commands_raw": "Yeah I would like to have some candy today give me one!\n\n?> here you go sir, Enjoy! -> dia1-1",
 		"gnode_name": "dia1",
 		"id": 1,
 		"name": "dia1",
+		"position": [
+			-480,
+			-80
+		]
+	},
+	{
+		"commands_raw": "uhh I think I have to decline the smell is not that appetizing to me\n\n?> Okay sir! you can ask us again if you change your mind -> dia2-1\n",
+		"gnode_name": "dia2",
+		"id": 2,
+		"name": "dia2",
 		"position": [
 			-480,
 			0
 		]
 	},
 	{
-		"commands_raw": "That’s good to hear, but let’s talk about risk. What are the main risks you see, and how are you planning to mitigate them?\n\n?> We see competition and changing consumer trends as the biggest risks. To manage these, we’re maintaining a flexible product development strategy that allows us to quickly adapt to new trends. Additionally, we’re building a strong brand that can weather short-term market shifts -> dia 3\n\n?> The primary risks are related to market competition and potential supply chain disruptions. To mitigate these, we’ve built strong supplier relationships and diversified our sources to avoid over-reliance on any single partner. On the competitive front, we’re focused on continuous innovation to stay ahead of the curve. -> dia3\n\n?> Our main risks are scaling too fast and potential cash flow issues. To mitigate this, we’re ensuring we have proper financial controls in place, and we’re maintaining a conservative burn rate to avoid running into liquidity problems -> dia3",
-		"gnode_name": "dia2",
-		"id": 2,
-		"name": "dia2",
-		"position": [
-			-300,
-			0
-		]
-	},
-	{
-		"commands_raw": "end",
+		"commands_raw": "Nah I think im good I'll try it next time\n\n?> No worries sir, have a good day -> dia3-1\n?> Okay... rude -> dia3-2",
 		"gnode_name": "dia3",
 		"id": 3,
 		"name": "dia3",
 		"position": [
-			-120,
+			-480,
+			100
+		]
+	},
+	{
+		"commands_raw": "end",
+		"gnode_name": "dia3-1",
+		"id": 4,
+		"name": "dia3-1",
+		"position": [
+			-360,
+			100
+		]
+	},
+	{
+		"commands_raw": "aws",
+		"gnode_name": "dia3-2",
+		"id": 5,
+		"name": "dia3-2",
+		"position": [
+			-360,
+			200
+		]
+	},
+	{
+		"commands_raw": "end",
+		"gnode_name": "dia2-1",
+		"id": 6,
+		"name": "dia2-1",
+		"position": [
+			-360,
 			0
+		]
+	},
+	{
+		"commands_raw": "sale",
+		"gnode_name": "dia1-1",
+		"id": 7,
+		"name": "dia1-1",
+		"position": [
+			-360,
+			-80
 		]
 	}
 ]

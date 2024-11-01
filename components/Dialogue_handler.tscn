@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cw0vbop7wsi"]
+[gd_scene load_steps=17 format=3 uid="uid://cw0vbop7wsi"]
 
 [ext_resource type="Theme" uid="uid://b3ig4aw5ld7oi" path="res://components/buttons/dialogue_theme.tres" id="1_1gjkp"]
 [ext_resource type="Script" path="res://components/scripts/dialogue_handler.gd" id="1_lhpej"]
@@ -10,6 +10,10 @@
 [ext_resource type="Script" path="res://addons/ez_dialogue/ez_dialogue_node.gd" id="4_j8pvr"]
 [ext_resource type="JSON" path="res://dialogues/4dialogue.json" id="5_q118n"]
 [ext_resource type="Texture2D" uid="uid://c8hwxs7px303j" path="res://assets/dialogue_box.png" id="6_05iyd"]
+[ext_resource type="JSON" path="res://dialogues/5dialogue.json" id="6_avflv"]
+[ext_resource type="JSON" path="res://dialogues/6dialogue.json" id="7_c1x4j"]
+[ext_resource type="JSON" path="res://dialogues/7dialogue.json" id="8_4fe7h"]
+[ext_resource type="JSON" path="res://dialogues/8dialogue.json" id="9_jouom"]
 [ext_resource type="Shader" path="res://scenes/shaders/pause_menu.gdshader" id="10_888xb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3ymks"]
@@ -27,7 +31,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lhpej")
-list_of_dialogue = Array[JSON]([ExtResource("2_wrw7q"), ExtResource("2_wrw7q"), ExtResource("3_yp6fp"), ExtResource("4_0jrrw"), ExtResource("5_q118n")])
+dialogues_kid = Array[JSON]([ExtResource("2_wrw7q"), ExtResource("6_avflv")])
+dialogues_granny = Array[JSON]([ExtResource("3_yp6fp"), ExtResource("7_c1x4j")])
+dialogues_gangster = Array[JSON]([ExtResource("4_0jrrw"), ExtResource("8_4fe7h")])
+dialogues_tourist = Array[JSON]([ExtResource("5_q118n"), ExtResource("9_jouom")])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 top_level = true

@@ -1,42 +1,82 @@
 [
 	{
-		"commands_raw": "I’m interested in the idea, but I’m concerned about how crowded the market is. What makes your product stand out from the competition?\n\n?> Our competitive advantage lies in our unique technology, which offers a feature that no other competitor has. We’ve patented this technology, ensuring that we can offer something truly distinct. Additionally, our product has proven to be 30% more efficient than the nearest competitor in user testing. -> dia1\n\n?> What sets us apart is our customer-centric approach. We’ve designed the product based on extensive user feedback, and our focus on personalization and user experience is something other companies in the space are lacking -> dia1\n\n?> We stand out because of our price point and accessibility. We’ve created a product that is affordable without compromising on quality, making it appealing to a larger segment of the market that competitors often overlook -> dia1",
+		"commands_raw": "Hi I would like to buy something. What can I get?\n\n?> Here we have Fried Chicken -> dia1\n?> We have Dried fish -> dia2\n?> lastly we have candy ->dia3\n",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "start",
 		"position": [
-			-620,
-			20
+			-700,
+			0
 		]
 	},
 	{
-		"commands_raw": "That’s helpful, but let’s talk numbers. How do you plan to achieve profitability, and how soon do you expect to break even?\n\n?> We expect to break even within 12 months, thanks to our low operating costs and high margins. We’re also pursuing strategic partnerships that will provide additional revenue streams, allowing us to reach profitability faster than initially projected. -> dia2\n\n?> We have a clear path to profitability within 18 months. Our business model is built on recurring revenue through subscription services, which provides us with a predictable income stream and minimizes the financial risks typically associated with product sales -> dia2\n\n?> We anticipate breaking even within two years. We’re focusing on keeping costs low by optimizing our supply chain and maintaining lean operations, which will help us reach profitability even as we scale -> dia2",
+		"commands_raw": "I mean okay fried chicken it is.\n\n?> I hope you like it -> dia1-1\n?> You're such a picky eater -> dia1-2\n",
 		"gnode_name": "dia1",
 		"id": 1,
 		"name": "dia1",
 		"position": [
-			-480,
-			20
+			-520,
+			-100
 		]
 	},
 	{
-		"commands_raw": "Good, but one more concern: how do you plan to handle market fluctuations or economic downturns? What’s your strategy for staying resilient in a volatile market?\n\n?> We plan to diversify into adjacent markets to protect ourselves from market-specific downturns. We’re also implementing contingency plans for cash flow management to ensure we have enough liquidity to navigate any rough patches -> dia3\n\n?> Our focus on customer loyalty will be a key factor in staying resilient. By creating strong relationships with our customer base, we’re confident we can maintain revenue even during difficult times. Additionally, we’ve kept our operational costs low, giving us the flexibility to adjust if needed -> dia3\n\n?> We’re building a diversified revenue stream that isn’t dependent on any single market or region. In addition, our financial model includes a strong cash reserve to help us weather potential economic downturns. We’ve also identified several cost-cutting measures that can be implemented if necessary, without sacrificing quality. -> dia3",
+		"commands_raw": "eughh I dont like how that smell\n\n?> I'm so sorry ma'am -> dia2-1",
 		"gnode_name": "dia2",
 		"id": 2,
 		"name": "dia2",
 		"position": [
-			-340,
-			20
+			-520,
+			0
 		]
 	},
 	{
-		"commands_raw": "end",
+		"commands_raw": "I kinda don't want to have candy right now, sorry\n\n?> That's alright maam, I understand -> dia3-1",
 		"gnode_name": "dia3",
 		"id": 3,
 		"name": "dia3",
 		"position": [
-			-200,
-			20
+			-520,
+			100
+		]
+	},
+	{
+		"commands_raw": "sale+",
+		"gnode_name": "dia1-1",
+		"id": 4,
+		"name": "dia1-1",
+		"position": [
+			-400,
+			-180
+		]
+	},
+	{
+		"commands_raw": "aws",
+		"gnode_name": "dia2-1",
+		"id": 5,
+		"name": "dia2-1",
+		"position": [
+			-400,
+			0
+		]
+	},
+	{
+		"commands_raw": "end",
+		"gnode_name": "dia3-1",
+		"id": 6,
+		"name": "dia3-1",
+		"position": [
+			-400,
+			100
+		]
+	},
+	{
+		"commands_raw": "sale",
+		"gnode_name": "dia1-2",
+		"id": 7,
+		"name": "dia1-2",
+		"position": [
+			-400,
+			-100
 		]
 	}
 ]

@@ -1,6 +1,11 @@
 extends Control
 
-@export var list_of_dialogue: Array[JSON]
+@export var dialogues_kid: Array[JSON]
+@export var dialogues_granny: Array[JSON]
+@export var dialogues_gangster: Array[JSON]
+@export var dialogues_tourist: Array[JSON]
+
+
 @onready var state = {
 	"player_name": player_name
 }
@@ -16,16 +21,16 @@ var point: int = 0
 
 func _ready() -> void:
 	if Global.character_image == Global.tourist:
-		($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[4], state)
+		($EzDialogue as EzDialogue).start_dialogue(dialogues_tourist[randi() % dialogues_tourist.size()], state)
 		
 	if Global.character_image == Global.kid:
-		($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[1], state)
+		($EzDialogue as EzDialogue).start_dialogue(dialogues_kid[randi() % dialogues_kid.size()], state)
 		
 	if Global.character_image == Global.gangster:
-		($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[3], state)
+		($EzDialogue as EzDialogue).start_dialogue(dialogues_gangster[randi() % dialogues_gangster.size()], state)
 	
 	if Global.character_image == Global.granny:
-		($EzDialogue as EzDialogue).start_dialogue(list_of_dialogue[2], state)
+		($EzDialogue as EzDialogue).start_dialogue(dialogues_granny[randi() % dialogues_granny.size()], state)
 	$talker.texture = Global.character_image
 	
 	

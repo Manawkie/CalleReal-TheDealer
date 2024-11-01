@@ -1,6 +1,6 @@
 [
 	{
-		"commands_raw": "Hello ano nami baklon?\n\n?> Candy -> dia1\n?> Piyaya -> dia2\n?> KFC -> dia3\n",
+		"commands_raw": "Hello ano nami baklon?\n\n?> Candy -> dia1\n?> Piyaya -> dia2\n?> Fried chicken -> dia3\n",
 		"gnode_name": "start",
 		"id": 0,
 		"name": "start",
